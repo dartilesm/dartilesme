@@ -1,4 +1,4 @@
-import { Grid, Row, Spacer, Text } from "@nextui-org/react";
+import { Grid, Spacer, Text } from "@nextui-org/react";
 import Project from "./Project";
 
 const listOfProjects = [

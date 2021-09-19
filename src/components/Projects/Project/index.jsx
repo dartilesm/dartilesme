@@ -1,5 +1,4 @@
 import { Button, Col, Grid, Link, Row, Spacer, Text } from "@nextui-org/react"
-import ImageCover from "./ImageCover"
 import { FiExternalLink, FiGithub } from 'react-icons/fi'
 import styles from './index.module.css'
 
