@@ -30,18 +30,18 @@ const Header = () => (
                             Tecnologías
                         </Link>
                     </Text>
-                    <Text color="white" size="1.2rem" className={styles.links} target="_blank" rel="noreferer">
-                        <Link href="https://github.com/dartilesm">
+                    <Text color="white" size="1.2rem" className={styles.links}>
+                        <Link href="https://github.com/dartilesm" target="_blank" rel="noreferer">
                             <FiGithub size={20} />
                         </Link>
                     </Text>
-                    <Text color="white" size="1.2rem" className={styles.links} target="_blank" rel="noreferer">
-                        <Link href="https://www.linkedin.com/in/dartiles/">
+                    <Text color="white" size="1.2rem" className={styles.links}>
+                        <Link href="https://www.linkedin.com/in/dartiles/" target="_blank" rel="noreferer">
                             <FiLinkedin size={20} />
                         </Link>
                     </Text>
-                    <Text color="white" size="1.2rem" className={styles.links} target="_blank" rel="noreferer">
-                        <Link href="https://twitter.com/intent/follow?screen_name=dartilesm">
+                    <Text color="white" size="1.2rem" className={styles.links}>
+                        <Link href="https://twitter.com/intent/follow?screen_name=dartilesm" target="_blank" rel="noreferer">
                             <FiTwitter size={20} />
                         </Link>
                     </Text>
