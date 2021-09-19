@@ -1,0 +1,16 @@
+.imageCover {
+    min-height: 10rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 10px;
+}
+
+.backdrop {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: #01011bd6;
+}

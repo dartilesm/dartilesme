@@ -1,0 +1,45 @@
+.header {
+    height: auto;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #010126;
+    box-shadow: 0px 2px 18px rgb(1, 1, 38);
+	-webkit-box-shadow: 0px 2px 18px rgb(1, 1, 38);
+	-moz-box-shadow: 0px 2px 18px rgb(1, 1, 38);
+}
+
+.links {
+    display: flex;
+    align-items: center;
+}
+
+.resumeButtton {
+    margin: 0 1rem;
+}
+
+.logoContainer {
+    cursor: pointer;
+}
+
+.menuContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.menuContainer p {
+    cursor: pointer;
+    padding: .75rem;
+    border-radius: 10px;
+    transition: all .5s ease;
+}
+
+.menuContainer p:hover {
+    background-color: #010126;
+}
+
+.menuContainer p a:hover {
+    color: inherit !important;
+}
