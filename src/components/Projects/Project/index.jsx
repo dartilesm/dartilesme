@@ -4,9 +4,7 @@ import styles from './index.module.css'
 
 
 const Project = ({ name, description, urlProject, urlCode, technologies, image }) => {
-    console.log(urlCode, urlProject)
     const openUrl = (url) => {
-        console.log('Holis')
         window.open(url, '_blank')
     }
 
