@@ -74,3 +74,9 @@
         width: 60%;
     }
 }
+
+@media screen and (max-width: 625px) {
+    .projectInfo {
+        width: 80%;
+    }
+}
