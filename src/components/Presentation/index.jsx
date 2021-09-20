@@ -22,7 +22,7 @@ const Presentation = () => (
                             Desarrollo aplicaciones webs y móviles
                         </Text>
                         <Text h4 color="#b6b6b6" style={{ margin: 0, marginBottom: 15 }}>
-                            Soy desarrollador frotend en Coco. Proactivo y siempre en busca de crear nuevas cosas 🚀.
+                            Soy desarrollador frontend en Coco. Me considero una persona proactiva y siempre en busca de crear nuevas cosas 🚀.
                         </Text>
                         <Button rounded auto iconRight={<FiMail />}>
                             Contáctame
