@@ -1,5 +1,5 @@
 import { Container } from '@nextui-org/react';
-import './App.css';
+import styles from './app.module.css';
 import AboutMe from './components/AboutMe';
 import Header from './components/Header';
 import Presentation from './components/Presentation';
@@ -8,7 +8,7 @@ import Projects from './components/Projects';
 const App = () => (
   <>
     <Header />
-    <Container>
+    <Container className={styles.mainContent}>
       <Presentation />
       <Projects />
       <AboutMe />
