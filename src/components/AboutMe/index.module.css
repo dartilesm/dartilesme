@@ -1,0 +1,13 @@
+.aboutMe {
+    position: relative;
+    background-color: #010126;
+    padding: 1rem !important;
+    border-radius: 10px;
+}
+
+.callToAction {
+    position: absolute !important;
+    bottom: -20px;
+    right: 50%;
+    transform: translateX(50%);
+}

@@ -6,12 +6,12 @@ import styles from './index.module.css'
 
 const MENU_ITEMS = [
     {
-        name: 'Proyectos',
-        href: '#projects'
+        name: 'Sobre mi',
+        href: '#about-me'
     },
     {
-        name: 'Sobre mi',
-        href: '#'
+        name: 'Proyectos',
+        href: '#projects'
     },
     {
         name: 'Historia',

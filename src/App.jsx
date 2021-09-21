@@ -10,8 +10,8 @@ const App = () => (
     <Header />
     <Container className={styles.mainContent}>
       <Presentation />
-      <Projects />
       <AboutMe />
+      <Projects />
     </Container>
   </>
 );
