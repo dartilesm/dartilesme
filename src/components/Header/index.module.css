@@ -46,7 +46,6 @@
 .mobileMenuContainer {
     padding: 4.5rem 0 !important;
     height: 100vh;
-    width: 30vw;
     top: 0;
     position: fixed;
     background-color: #010126;
@@ -57,7 +56,7 @@
     overflow-y: auto;
     flex-direction: column;
     justify-content: center;
-    transform: translateX(30vw);
+    transform: translateX(100%)
 }
 
 .open {
