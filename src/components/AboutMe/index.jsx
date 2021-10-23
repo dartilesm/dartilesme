@@ -9,7 +9,7 @@ const AboutMe = () => (
         </Text>
         <Spacer y={2}/>
         <Row justify="center">
-            <Grid sm={12} md={6} direction="column" className={styles.aboutMe}>
+            <Grid sm={12} md={8} direction="column" className={styles.aboutMe}>
                 <Text color="#f6f6f6">
                     Mi nombre es Diego Artiles, soy un <b>desarrollador especializado en el Frontend</b> con 5 años de experiencia. 👨‍💻
                 </Text>
