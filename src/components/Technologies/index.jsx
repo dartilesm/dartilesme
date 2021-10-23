@@ -6,14 +6,16 @@ import TechnologyItem from "./TechnologyItem"
 
 const Technologies = () => (
     <>
-        <Text h2 align="center" color="white" id="projects">
+        <Spacer id="technologies"/>
+        <Spacer y={4} />
+        <Text h2 align="center" color="white">
             Tecnologías
         </Text>
         <Spacer y={2} />
         <Row justify="center">
             <Grid sm={12} md={8} direction="column">
                 <Text color="white">
-                    Estas son algunas de las tecnologías con las cuales he trabajadooo
+                    De manera resumida les dejo, algunas de tecnologías o herramientas que utilizo o he utilizado 🤗
                 </Text>
             </Grid>
         </Row>
@@ -30,25 +32,25 @@ const Technologies = () => (
                             name="Angular"
                         />
                     </Grid>
-                    <Grid>
+                    <Grid className={styles.skill}>
                         <TechnologyItem 
                             icon={<SiReact size="4rem" color="#60dafc" />}
                             name="React"
                         />
                     </Grid>
-                    <Grid>
+                    <Grid className={styles.skill}>
                         <TechnologyItem 
                             icon={<SiSvelte size="4rem" color="#ff3c00" />}
                             name="Svelte"
                         />
                     </Grid>
-                    <Grid>
+                    <Grid className={styles.skill}>
                         <TechnologyItem 
                             icon={<SiVuedotjs size="4rem" color="#41b883" />}
                             name="Vue"
                         />
                     </Grid>
-                    <Grid>
+                    <Grid className={styles.skill}>
                         <TechnologyItem 
                             icon={<SiNestjs size="4rem" color="#e0234e" />}
                             name="NestJS"
@@ -61,13 +63,13 @@ const Technologies = () => (
                     Testing
                 </Text>
                 <Grid.Container gap={2} wrap="wrap">
-                    <Grid>
+                    <Grid className={styles.skill}>
                         <TechnologyItem 
                             icon={<SiJest size="4rem" color="#99424f"/>}
                             name="Jest"
                         />
                     </Grid>
-                    <Grid>
+                    <Grid className={styles.skill}>
                         <TechnologyItem 
                             icon={<SiCypress size="4rem" color="#ffffff" />}
                             name="Cypress"

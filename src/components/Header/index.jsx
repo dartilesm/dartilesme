@@ -15,11 +15,11 @@ const MENU_ITEMS = [
     },
     {
         name: 'Historia',
-        href: '#'
+        href: '#history'
     },
     {
         name: 'Tecnologías',
-        href: '#'
+        href: '#technologies'
     }
 ]
 

@@ -15,7 +15,9 @@ const listOfProjects = [
 
 const Projects = () => (
     <>
-        <Text h2 align="center" color="white" id="projects">
+        <Spacer id="projects"/>
+        <Spacer y={4} />
+        <Text h2 align="center" color="white">
             Proyectos Destacados
         </Text>
         <Spacer y={2}/>
@@ -29,7 +31,6 @@ const Projects = () => (
                     })
             }
         </Grid.Container>
-        <Spacer y={8}/>
     </>
 )
 

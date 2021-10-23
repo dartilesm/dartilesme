@@ -1,10 +1,12 @@
-import { Button, Grid, Row, Spacer, Text } from "@nextui-org/react";
+import { Button, Grid, Link, Row, Spacer, Text } from "@nextui-org/react";
 import { FiArrowDown } from "react-icons/fi";
 import styles from './index.module.css'
 
 const AboutMe = () => (
     <>
-        <Text h2 align="center" color="white" id="about-me">
+        <Spacer id="about-me" />
+        <Spacer y={4} />
+        <Text h2 align="center" color="white">
             Sobre mi
         </Text>
         <Spacer y={2}/>
@@ -24,12 +26,11 @@ const AboutMe = () => (
                 </Text>
                 <Grid className={styles.callToAction}>
                     <Button rounded color="secondary" iconRight={<FiArrowDown />} auto>
-                        ¿Te cuento mi historia?
+                        <Link href="#history">¿Te cuento mi historia?</Link>
                     </Button>
                 </Grid>
             </Grid>
         </Row>
-        <Spacer y={4}/>
     </>
 )
 
