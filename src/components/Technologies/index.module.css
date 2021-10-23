@@ -1,5 +1,9 @@
+.skillsContainer {
+    margin: auto !important;
+}
+
 .skills {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem !important;
 }
 
 .skill {

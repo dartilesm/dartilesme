@@ -1,4 +1,4 @@
-import { Col, Grid, Row, Spacer, Text } from "@nextui-org/react"
+import { Grid, Row, Spacer, Text } from "@nextui-org/react"
 import { SiAngular, SiCypress, SiJest, SiNestjs, SiReact, SiSvelte, SiVuedotjs } from 'react-icons/si'
 import styles from './index.module.css'
 import TechnologyItem from "./TechnologyItem"
@@ -20,18 +20,18 @@ const Technologies = () => (
             </Grid>
         </Row>
         <Spacer y={1} />
-        <Row justify="center" wrap="wrap">
-            <Grid sm={12} md={4} direction="column" className={styles.skills}>
+        <Grid.Container sm={12} md={8} justify="center" wrap="wrap" className={styles.skillsContainer}>
+            <Grid sm={12} direction="column" className={styles.skills}>
                 <Text h3 color="white">
                     Frameworks/librerías
                 </Text>
                 <Grid.Container gap={2} wrap="wrap">
-                    <Grid className={styles.skill}>
-                        <TechnologyItem 
-                            icon={<SiAngular size="4rem" color="#dd0031" />}
-                            name="Angular"
-                        />
-                    </Grid>
+                        <Grid className={styles.skill}>
+                            <TechnologyItem 
+                                icon={<SiAngular size="4rem" color="#dd0031" />}
+                                name="Angular"
+                            />
+                        </Grid>
                     <Grid className={styles.skill}>
                         <TechnologyItem 
                             icon={<SiReact size="4rem" color="#60dafc" />}
@@ -58,7 +58,7 @@ const Technologies = () => (
                     </Grid>
                 </Grid.Container>
             </Grid>
-            <Grid sm={12} md={4} direction="column" className={styles.skills}>
+            <Grid sm={12} direction="column" className={styles.skills}>
                 <Text h3 color="white">
                     Testing
                 </Text>
@@ -77,14 +77,7 @@ const Technologies = () => (
                     </Grid>
                 </Grid.Container>
             </Grid>
-        </Row>
-        <Row>
-            <Col>
-
-            </Col>
-            <Col>
-            </Col>
-        </Row>
+        </Grid.Container>
     </>
 )
 
