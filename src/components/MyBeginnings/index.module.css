@@ -1,5 +1,5 @@
 .tooltip {
-    display: inline-block;
+    display: inline-block !important;
 }
 
 .underline {
