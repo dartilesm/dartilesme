@@ -46,7 +46,7 @@ const Header = () => {
 
     const downloadCV = () => { 
         setIsOpenMenu(!isOpenMenu)
-        window.open(`${window.location.host}/cv.pdf`, '_blank') 
+        window.open('/cv.pdf', '_blank') 
     }
 
     return (
