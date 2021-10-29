@@ -44,6 +44,11 @@ const MENU_LINKS = [
 const Header = () => {
     const [isOpenMenu, setIsOpenMenu] = useState(false)
 
+    const downloadCV = () => { 
+        setIsOpenMenu(!isOpenMenu)
+        window.open(`${window.location.host}/cv.pdf`, '_blank') 
+    }
+
     return (
         <Grid className={styles.header}>
             <Container>
@@ -77,7 +82,7 @@ const Header = () => {
                                         </Text>
                                     )
                                 }
-                                <Button auto rounded className={styles.resumeButtton} onClick={() => setIsOpenMenu(!isOpenMenu)}>
+                                <Button auto rounded className={styles.resumeButtton} onClick={downloadCV}>
                                     Descargar CV
                                 </Button>
                             </Grid>
@@ -101,7 +106,7 @@ const Header = () => {
                                     </Text>
                                 )
                             }
-                            <Button auto rounded className={styles.resumeButtton}>
+                            <Button auto rounded className={styles.resumeButtton} onClick={downloadCV}>
                                 Descargar CV
                             </Button>
                         </Grid>
