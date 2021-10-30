@@ -1,5 +1,6 @@
 import { Avatar, Button, Col, Grid, Row, Text } from "@nextui-org/react"
 import { FiMail } from "react-icons/fi"
+import ProfileImg from '../../assets/me.jpg'
 import styles from './index.module.css'
 
 const Presentation = () => {
@@ -12,7 +13,7 @@ const Presentation = () => {
             <Grid.Container gap={5} justify="center">
                 <Grid>
                     <Col className={styles.avatarContainer}>
-                        <Avatar className={styles.avatar} size={250} src="/me.jpg" bordered alt="profile image" />
+                        <Avatar className={styles.avatar} size={250} src={ProfileImg} bordered alt="profile image" />
                     </Col>
                 </Grid>
                 <Grid xs={12} sm={6}>

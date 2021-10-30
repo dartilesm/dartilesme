@@ -16,9 +16,10 @@
   width: 100vw;
   -webkit-mask-image: linear-gradient(to top, transparent 20%, black 100%);
   mask-image: linear-gradient(to top, transparent 20%, black 100%);
-  background-image: url('https://www.technotification.com/wp-content/uploads/2017/06/focused-programmer-writing-code-1024x683.jpg');
+  background-image: url('assets/cover.jpg');
   background-repeat: no-repeat;
   background-position-x: center;
+  background-position-y: bottom;
   background-size: cover;
   z-index: 0;
 }
