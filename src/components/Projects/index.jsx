@@ -1,7 +1,7 @@
 import { Grid, Spacer } from "@nextui-org/react";
+import { Section, Title } from '../UI';
+import styles from './index.module.css';
 import Project from "./Project";
-import { Section, Text, Title } from '../UI'
-import styles from './index.module.css'
 
 const listOfProjects = [
     {

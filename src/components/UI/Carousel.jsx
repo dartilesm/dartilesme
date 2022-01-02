@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import styles from './ui.module.css';
 
 const Carousel = ({items = []}) => {

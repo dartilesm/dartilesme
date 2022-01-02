@@ -1,7 +1,5 @@
-import { Button, Grid, Link, Row, Spacer } from "@nextui-org/react";
-import { FiArrowDown } from "react-icons/fi";
-import { Title, Text, Section } from "../UI";
-import styles from './index.module.css'
+import { Grid, Row, Spacer } from "@nextui-org/react";
+import { Section, Text, Title } from "../UI";
 
 const AboutMe = () => (
     <>

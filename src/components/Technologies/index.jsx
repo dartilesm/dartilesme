@@ -1,6 +1,6 @@
-import { Grid, Row, Spacer } from "@nextui-org/react"
-import { SiAngular, SiCypress, SiJest, SiNestjs, SiReact, SiSvelte, SiVuedotjs, SiIonic, SiTestinglibrary, SiVite, SiRollupdotjs, SiWebpack } from 'react-icons/si'
-import { Section, Title, Text, Subtitle } from "../UI"
+import { Grid, Spacer } from "@nextui-org/react"
+import { SiAngular, SiCypress, SiIonic, SiJest, SiNestjs, SiReact, SiRollupdotjs, SiSvelte, SiTestinglibrary, SiVite, SiVuedotjs, SiWebpack } from 'react-icons/si'
+import { Section, Subtitle, Text, Title } from "../UI"
 import styles from './index.module.css'
 import TechnologyItem from "./TechnologyItem"
 
