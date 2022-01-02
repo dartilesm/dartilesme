@@ -1,5 +1,5 @@
-import { Collapse, Link, Spacer, Tooltip } from "@nextui-org/react"
-import { Text, Title, Section, Subtitle } from "../UI"
+import { Card, Collapse, Link, Spacer, Tooltip } from "@nextui-org/react"
+import { Text, Title, Section, Subtitle, Carousel } from "../UI"
 import styles from './index.module.css'
 
 const MyBeginnings = () => {
@@ -15,6 +15,33 @@ const MyBeginnings = () => {
             paddingBottom: 0
         }
     }
+
+    const experienceTimeline = [
+        <Card shadow css={{width: '300px'}}>
+            <Subtitle className={styles.jobYear}>2021</Subtitle>
+            <Text size={16}>Lorem ipsum dolor sit amet.</Text>
+        </Card>,
+        <Card shadow css={{width: '300px'}}>
+            <Subtitle className={styles.jobYear}>2020</Subtitle>
+            <Text size={16}>Lorem ipsum dolor sit amet.</Text>
+        </Card>,
+        <Card shadow css={{width: '300px'}}>
+            <Subtitle className={styles.jobYear}>2019</Subtitle>
+            <Text size={16}>Lorem ipsum dolor sit amet.</Text>
+        </Card>,
+        <Card shadow css={{width: '300px'}}>
+            <Subtitle className={styles.jobYear}>2018</Subtitle>
+            <Text size={16}>Lorem ipsum dolor sit amet.</Text>
+        </Card>,
+        <Card shadow css={{width: '300px'}}>
+            <Subtitle className={styles.jobYear}>2017</Subtitle>
+            <Text size={16}>Lorem ipsum dolor sit amet.</Text>
+        </Card>,
+        <Card shadow css={{width: '300px'}}>
+            <Subtitle className={styles.jobYear}>2016</Subtitle>
+            <Text size={16}>Lorem ipsum dolor sit amet.</Text>
+        </Card>
+    ]
     return  <>
         <Spacer id="history" />
         <Section>
@@ -120,6 +147,7 @@ const MyBeginnings = () => {
             </Collapse.Group>
             <Spacer y={2} />
             <Subtitle>Experiencia</Subtitle>
+            <Carousel items={experienceTimeline} />
         </Section>
     </>
 }

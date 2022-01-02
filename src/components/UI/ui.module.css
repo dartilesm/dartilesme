@@ -66,6 +66,35 @@
     margin: 4rem 0 3rem 0;
 }
 
+.carousel {
+    scroll-snap-type: x mandatory;
+    background: #0F1624;
+    padding: 1rem 0 2rem 0;
+    display: flex;
+    justify-content: space-between; 
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin-bottom: 80px;
+}
+
+.carousel:first-of-type {
+    margin-left: 0px;
+}
+
+.carouselItem {
+  background: #0F1624;
+  border-radius: 3px;
+  width: auto;
+  margin: 0 .5rem;
+  scroll-snap-align: start;
+}
+
+.carouselItem:first-of-type {
+    margin-left: 0;
+}
+.carouselItem:last-of-type {
+    margin-right: 0;
+}
 
 /* Media Queries */
 
