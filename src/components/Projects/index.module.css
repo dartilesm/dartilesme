@@ -1,0 +1,10 @@
+.projectContainer {
+    min-height: 400px;
+}
+
+@media screen and (max-width: 640px) {
+    .projectContainer {
+        min-height: 600px;
+    }
+
+}

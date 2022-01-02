@@ -1,5 +1,6 @@
-import { Button, Col, Grid, Link, Row, Spacer, Text } from "@nextui-org/react"
+import { Button, Col, Grid, Link, Row, Spacer } from "@nextui-org/react"
 import { FiExternalLink, FiGithub } from 'react-icons/fi'
+import { Text } from "../../UI"
 import styles from './index.module.css'
 
 
@@ -10,15 +11,15 @@ const Project = ({ name, description, urlProject, urlCode, technologies, image }
 
     return <>
         <Row justify="center">
-            <Col span={4} className={styles.projectInfoContainer}>
+            <Col className={styles.projectInfoContainer}>
                 <Spacer y={16} />
                 <Grid className={styles.projectInfo}>
-                    <Text h3 color="#efe">{name}</Text>
-                    <Text small color="warning">{technologies}</Text>
-                    <Text color="#b6b6b6" blockquote>{description}</Text>
+                    <Text css={{paddingBottom: 0, fontWeight: 600}}>{name}</Text>
+                    <Text size={20} color="warning" css={{paddingBottom: 0}}>{technologies}</Text>
+                    <Text size={20} color="#b6b6b6" b css={{paddingBottom: 0}}>{description}</Text>
                     <Grid className={styles.buttonContainer}>
                         {
-                            urlProject && <Button onClick={() => openUrl(urlProject)} rounded color="primary" auto iconRight={<FiExternalLink />}> 
+                            urlProject && <Button onClick={() => openUrl(urlProject)} rounded color="primary" iconRight={<FiExternalLink />}> 
                                 Ir al sitio
                             </Button>
                         }

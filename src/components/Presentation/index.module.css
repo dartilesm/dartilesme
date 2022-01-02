@@ -1,6 +1,11 @@
 .presentation {
-    height: 100vh;
-    margin: 0;
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+}
+
+.welcome {
+    max-width: 500px;
 }
 
 .avatarContainer {
