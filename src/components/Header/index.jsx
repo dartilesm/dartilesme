@@ -1,4 +1,4 @@
-import { Button, Col, Container, Grid, Link, Row, Text } from "@nextui-org/react"
+import { Button, Col, Grid, Link, Row, Text } from "@nextui-org/react"
 import { useState } from "react"
 import { FiGithub, FiLinkedin, FiMenu, FiTwitter, FiX } from "react-icons/fi"
 import { Section } from '../UI'
