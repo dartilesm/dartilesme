@@ -14,7 +14,7 @@ const Project = ({ name, description, urlProject, urlCode, technologies, image }
             <Col className={styles.projectInfoContainer}>
                 <Spacer y={16} />
                 <Grid className={styles.projectInfo}>
-                    <Text css={{paddingBottom: 0, fontWeight: 600}}>{name}</Text>
+                    <Text color="rgba(255, 255, 255, 0.5)" css={{paddingBottom: 0, fontWeight: 600}}>{name}</Text>
                     <Text size={20} color="warning" css={{paddingBottom: 0}}>{technologies}</Text>
                     <Text size={20} color="#b6b6b6" b css={{paddingBottom: 0, lineHeight: 1.5}}>{description}</Text>
                     <Grid className={styles.buttonContainer}>

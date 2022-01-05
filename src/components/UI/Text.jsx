@@ -21,7 +21,7 @@ const Text = ({ children, className = '', size, color, css, ...props }) => {
         ...css,
     }
 
-    return <NextText size={size ?? 26} color={color || 'rgba(255, 255, 255, 0.5)'} {...props} className={`${styles.text} ${className}`} css={textStyle}>
+    return <NextText size={size ?? 26} color={color || '#8193b2'} {...props} className={`${styles.text} ${className}`} css={textStyle}>
         {children}
     </NextText>
 }
