@@ -5,8 +5,6 @@ const AboutMe = () => (
     <>
         <Spacer id="about-me" />
         <Section>
-            <Spacer id="about-me" />
-            <Spacer y={4} />
             <Title> Sobre mi</Title>
             <Row justify="center">
                 <Grid sm={12} direction="column">

@@ -6,7 +6,7 @@ const Text = ({ children, className = '', size, color, css, ...props }) => {
         lineHeight: '40px',
         fontWeight: 400,
         letterSpacing: '1px',
-        paddingBottom: '0',
+        paddingBottom: '24px',
         margin: 0,
         '@smMax': {
             fontSize: '16px',

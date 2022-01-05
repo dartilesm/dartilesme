@@ -1,6 +1,7 @@
 import { Button, Col, Container, Grid, Link, Row, Text } from "@nextui-org/react"
 import { useState } from "react"
 import { FiGithub, FiLinkedin, FiMenu, FiTwitter, FiX } from "react-icons/fi"
+import { Section } from '../UI'
 import styles from './index.module.css'
 
 
@@ -51,7 +52,7 @@ const Header = () => {
 
     return (
         <Grid className={styles.header}>
-            <Container>
+            <Section main>
                 <Row align="center">
                     <Col className={styles.logoContainer} span={2}>
                         <img src="./logo3.png" alt="logo" width={40} />
@@ -112,7 +113,7 @@ const Header = () => {
                         </Grid>
                     </Col>
                 </Row>
-            </Container>
+            </Section>
         </Grid>
     )
 }

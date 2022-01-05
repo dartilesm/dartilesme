@@ -92,10 +92,56 @@
 .carouselItem:first-of-type {
     margin-left: 0;
 }
+
 .carouselItem:last-of-type {
     margin-right: 0;
 }
 
+.timeline {
+    display: grid;
+    grid-row-gap: 2rem;
+    --uiTimelineMainColor: #222;
+    --uiTimelineSecondaryColor:#fff;
+    border-left: 3px solid #e5e5e5;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.timelineEvent {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    display: block;
+    font-size: 1.3rem;
+    --timePadding: .5rem 1.5rem;
+    --timeColor: var(--uiTimelineSecondaryColor);
+    --timeBackgroundColor: var(--uiTimelineMainColor);
+    --timeFontWeight: 400;
+}
+  
+.timelineCards {
+    display: grid;
+    grid-row-gap: 1.5rem;
+    overflow: hidden;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+}
+
+.timelineCard {
+    position: relative;
+    margin-left: 1rem;
+    max-width: calc(100% - 1.5rem);
+}
+
+.timelineCard::before{
+    content: "";
+    width: 100%;
+    height: var(--timelineCardLineWidth, 2px);
+    background-color: var(--timelineCardLineBackgroundColor, var(--uiTimelineMainColor));
+    position: absolute;
+    top: var(--timelineCardLineTop, 1rem);
+    left: -50%;
+    z-index: -1;
+}
 /* Media Queries */
 
 @media screen and (max-width: 1280px) {

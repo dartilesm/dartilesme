@@ -1,13 +1,13 @@
 .header {
     display: flex;
     align-items: center;
-    height: 60px;
+    height: 70px;
     min-height: 50px;
     width: 100vw;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 1000;
     background-color: #010126;
     box-shadow: 0px 2px 18px rgb(1, 1, 38);
 	-webkit-box-shadow: 0px 2px 18px rgb(1, 1, 38);
@@ -95,6 +95,8 @@
     padding: .75rem;
     border-radius: 10px;
     transition: all .5s ease;
+    display: flex;
+    align-items: center;
 }
 
 .desktopMenuContainer {
@@ -102,12 +104,9 @@
     align-items: center;
 }
 
-.desktopMenuContainer p:hover {
-    background-color: #01011b;
-}
-
 .menuContainer p a:hover {
     color: inherit !important;
+    transform: scale(103%)
 }
 
 @media screen and (max-width: 959px) {

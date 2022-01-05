@@ -34,6 +34,7 @@
     align-items: flex-end;
 }
 
+
 .projectInfo {
     position: absolute;
     z-index: 1;
@@ -41,6 +42,10 @@
     width: 50%;
     height: 100%;
     min-height: 300px;
+}
+
+.projectInfo > p:first-child {
+    padding-bottom: 0;
 }
 
 .projectInfo blockquote {
