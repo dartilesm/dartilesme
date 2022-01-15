@@ -1,5 +1,5 @@
 import { Button } from "@nextui-org/react"
-import { Section, Text, Title } from "../UI"
+import { Section, Text, Title } from "../../components/UI"
 import styles from './index.module.css'
 
 const Presentation = () => {

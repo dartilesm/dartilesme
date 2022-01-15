@@ -1,5 +1,5 @@
 import { Grid, Row, Spacer } from "@nextui-org/react";
-import { Section, Text, Title } from "../UI";
+import { Section, Text, Title } from "../../components/UI";
 
 const AboutMe = () => (
     <>

@@ -1,5 +1,5 @@
 import { Grid, Spacer } from "@nextui-org/react";
-import { Section, Title } from '../UI';
+import { Section, Title } from '../../components/UI';
 import styles from './index.module.css';
 import Project from "./Project";
 

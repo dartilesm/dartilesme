@@ -1,11 +1,11 @@
 import { Container } from '@nextui-org/react';
 import styles from './app.module.css';
-import AboutMe from './components/AboutMe';
+import AboutMe from './containers/AboutMe';
 import Header from './components/Header';
-import MyBeginnings from './components/MyBeginnings';
-import Presentation from './components/Presentation';
-import Projects from './components/Projects';
-import Technologies from './components/Technologies';
+import MyBeginnings from './containers/MyBeginnings';
+import Presentation from './containers/Presentation';
+import Projects from './containers/Projects';
+import Technologies from './containers/Technologies';
 
 const App = () => (
   <>

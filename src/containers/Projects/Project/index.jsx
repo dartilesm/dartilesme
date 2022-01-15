@@ -1,6 +1,6 @@
 import { Button, Col, Grid, Link, Row, Spacer } from "@nextui-org/react"
 import { FiExternalLink, FiGithub } from 'react-icons/fi'
-import { Text } from "../../UI"
+import { Text } from "../../../components/UI"
 import styles from './index.module.css'
 
 

@@ -1,5 +1,5 @@
 import { Collapse, Link, Spacer, Tooltip } from "@nextui-org/react";
-import { Section, Subtitle, Text, Timeline, Title } from "../UI";
+import { Section, Subtitle, Text, Timeline, Title } from "../../components/UI";
 import styles from './index.module.css';
 
 const MyBeginnings = () => {
