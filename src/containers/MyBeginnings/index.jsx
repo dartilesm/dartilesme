@@ -79,21 +79,21 @@ const MyBeginnings = () => {
                             <Text css={{...BOLD_TEXT_CSS, color: '$warning'}}>AngularJS</Text>
                         </Link> y <Link color="warning" icon href="https://angular.io/" rel="noreferrer noopener" target="_blank">
                             <Text css={{...BOLD_TEXT_CSS, color: '$warning'}}>Angular 2</Text>
-                        </Link> con ambas tecnologías participé en el desarrollo de una aplicación de telecomunicaciones trabajando con manejo de datos en tiempo real, mostrando datos historicos y demás. También participé en un proyecto de Elearning.
+                        </Link> con ambas tecnologías participé en el desarrollo de una <Text css={BOLD_TEXT_CSS}>aplicación de telecomunicaciones trabajando con manejo de datos en tiempo real,</Text> mostrando datos historicos y demás. También participé en un proyecto de <Text css={BOLD_TEXT_CSS}>Elearning.</Text>
                     </Text>
                     <Text css={{color: '#fff' }} size={18} color="rgba(255, 255, 255, 0.5)">
-                        Al cabo de 1 año aproximadamente tuve que dejar mi país para llegar a Argentina, en donde tuve la oportunidad de trabajar con Angular 5 en un proyecto para un call center. Luego de 2 años, cambié de proyecto a uno destinado a la parte de atención al cliente por chat el cual fue desarrollado en el Frontend con <Link color="warning" icon href="https://en.reactjs.org/" rel="noreferrer noopener" target="_blank">
+                        Al cabo de 1 año aproximadamente tuve que dejar mi país para llegar a Argentina, en donde tuve la oportunidad de trabajar con Angular 5 en un proyecto para un <Text css={BOLD_TEXT_CSS}>call center.</Text> Luego de 2 años, cambié de proyecto a uno destinado a la parte de atención al cliente por chat el cual fue desarrollado en el Frontend con <Link color="warning" icon href="https://en.reactjs.org/" rel="noreferrer noopener" target="_blank">
                             <Text css={{...BOLD_TEXT_CSS, color: '$warning'}}>
                                 React.
                             </Text>
                         </Link> En esta etapa una de las cosas que aprendí fue el concepto de <Link color="warning" icon href="https://micro-frontends.org/" rel="noreferrer noopener" target="_blank">
                             <Text css={{...BOLD_TEXT_CSS, color: '$warning'}}>micro frontends,</Text>
-                        </Link> gracias a esta arquitectura pudimos incrustar el chat dentro de una aplicación monolitica construida en AngularJS. También pudimos hacerlo dentro de las aplicaciones móviles con código nátivo, esta vez utilizando <Link color="warning" icon href="https://developer.android.com/reference/android/webkit/WebView/" rel="noreferrer noopener" target="_blank">
+                        </Link> gracias a esta arquitectura pudimos <Text css={BOLD_TEXT_CSS}>incrustar el chat dentro de una aplicación monolitica construida en AngularJS.</Text> También pudimos hacerlo dentro de las aplicaciones móviles con código nátivo, esta vez utilizando <Link color="warning" icon href="https://developer.android.com/reference/android/webkit/WebView/" rel="noreferrer noopener" target="_blank">
                             <Text css={{...BOLD_TEXT_CSS, color: '$warning'}}>Web Views</Text>
                         </Link>.
                     </Text>
                     <Text size={18} blockquote css={{ margin: '10px 0 25px 0', color: '#fff' }}>
-                        Lo que más me encantó de esto, fue como <Text css={{fontWeight: 'bold', display: 'inline', color: '$warning', fontSize: 'inherit'}}>hacer coexistir varias aplicaciones dentro de una sola</Text>, sin importar las tecnologías en las que éstas estén hechas, así como también tener la posibilidad de estar en un equipo totalmente aislado al de la aplicación principal y gozar de total libertad e independencia en el desarrollo y despliegue de nuevas versiones.
+                        Lo que más me encantó de esto, fue como <Text css={{fontWeight: 'bold', display: 'inline', color: '$warning', fontSize: 'inherit', lineHeight: 'inherit'}}>hacer coexistir varias aplicaciones dentro de una sola</Text>, sin importar las tecnologías en las que éstas estén hechas, así como también tener la posibilidad de estar en un equipo totalmente aislado al de la aplicación principal y gozar de total libertad e independencia en el desarrollo y despliegue de nuevas versiones.
                     </Text>
                     <Text css={{color: '#fff' }} size={18} color="rgba(255, 255, 255, 0.5)">
                         Paralelamente a mi trabajo, estoy trabajando en mi propio blog el cual está hecho con <Link color="warning" icon href="https://svelte.dev/" rel="noreferrer noopener" target="_blank">
