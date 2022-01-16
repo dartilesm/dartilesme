@@ -1,5 +1,5 @@
 import { Collapse, Link, Spacer, Tooltip } from "@nextui-org/react";
-import { Section, Subtitle, Text, Timeline, Title } from "../../components/UI";
+import { Section, Text, Title } from "../../components/UI";
 import styles from './index.module.css';
 
 const MyBeginnings = () => {
@@ -37,66 +37,6 @@ const MyBeginnings = () => {
         }
     }
 
-    // const experiences = [
-    //     ['2021', [
-    //         {
-    //             title: <Text size={22} color="#fff" css={{paddingBottom: 0}}>Coco</Text>,
-    //             content: <>
-    //                 <Text css={{color: '#fff' }} size={18} color="#c5c5c5" css={{ lineHeight: 1.5 }}>Frontend Developer</Text>
-    //                 <Text size={16} color="#818181" css={{ lineHeight: 1.5 }}>Aquí estoy participando en el desarrollo de una tienda virtual, la cual está construida en Vue, junto a otra aplicación que está construida en React.</Text>
-    //             </>
-    //         }
-    //     ]],
-    //     ['2019', [
-    //         {
-    //             title: <Text size={22} color="#fff" css={{paddingBottom: 0}}>Workana</Text>,
-    //             content: <>
-    //                 <Text css={{color: '#fff' }} size={18} color="#c5c5c5" css={{ lineHeight: 1.5 }}>Frontend/Mobile Developer</Text>
-    //                 <Text size={16} color="#818181" css={{ lineHeight: 1.5 }}>En esta plataforma tuve la oportunidad de realizar aplicaciones móviles y webs con Ionic y Angular respectivamente. Entre ellas están:
-    //                 <Text size={16} color="#818181" css={{marginLeft: 20}}>
-    //                     • Una aplicación móvil similar a Uber, consiste en pedir remises para pasajeros que van del Aeropuerto de Ezeiza hacia Capital Federal.
-    //                 </Text>
-    //                 <Text size={16} color="#818181" css={{marginLeft: 20}}>
-    //                     • Aplicación para gestionar el levantamiento de información de los estados de Plantas, Sistemas, Equipos y más, y realizar otro tipos de actividades de una Industria. 
-    //                 </Text>
-    //             </Text>
-    //             </>
-    //         },
-    //         {
-    //             title: <Text size={22} color="#fff" css={{paddingBottom: 0}}>Santander Tecnología</Text>,
-    //             content: <>
-    //                 <Text css={{color: '#fff' }} size={18} color="#c5c5c5" css={{ lineHeight: 1.5 }}>Frontend Developer</Text>
-    //                 <Text size={16} color="#818181" css={{ lineHeight: 1.5 }}>Continué trabajando con Angular 5 en un proyecto bancario para un call center, posteriormente participé en la unificación del chat de Santander el cual a nivel de Frontend fue realizado en React. Aquí aprendí el concepto de microfrontend y sus principales beneficios.</Text>
-    //             </>
-    //         }
-    //     ]],
-    //     ['2018', [
-    //         {
-    //             title: <Text size={22} color="#fff" css={{paddingBottom: 0}}>Lagash</Text>,
-    //             content: <>
-    //                 <Text css={{color: '#fff' }} size={18} color="#c5c5c5" css={{ lineHeight: 1.5 }}>Frontend Developer</Text>
-    //                 <Text size={16} color="#818181" css={{ lineHeight: 1.5 }}>De haber hecho un E-learning y una app de telecomunicaciones, llego al lado bancario en el que continué enfrentándome a retos interesante, esta vez con Angular 5.</Text>
-    //             </>
-    //         }
-            
-    //     ]],
-    //     ['2017', [
-    //         {
-    //             title: <Text size={22} color="#fff" css={{paddingBottom: 0}}>Grupo Nepuntobiz</Text>,
-    //             content: <>
-    //                 <Text css={{color: '#fff' }} size={18} color="#c5c5c5" css={{ lineHeight: 1.5 }}>Frontend Developer</Text>
-    //                 <Text size={16} color="#818181" css={{ lineHeight: 1.5 }}>Aquí fue donde reforcé mis conocimientos con AngularJS la versión de ese entonces, y aprendí un poco de la versión 2. Desarrollamos aplicaciones interesantes con esta tecnología.</Text>
-    //             </>
-    //         },
-    //         {
-    //             title: <Text size={22} color="#fff" css={{paddingBottom: 0}}>Kinetics Solutions</Text>,
-    //             content: <>
-    //                 <Text css={{color: '#fff' }} size={18} color="#c5c5c5" css={{ lineHeight: 1.5 }}>Frontend Developer</Text>
-    //                 <Text size={16} color="#818181" css={{ lineHeight: 1.5 }}>Compañía socia de la anterior, me enfrenté a mi primer reto de desarrollador una aplicación de E-learning y otra aplicación de Telecomunicaciones.</Text>
-    //             </>
-    //         }
-    //     ]]
-    // ]
     return  <>
         <Spacer id="history" />
         <Section>
@@ -152,7 +92,7 @@ const MyBeginnings = () => {
                             <Text css={{...BOLD_TEXT_CSS, color: '$warning'}}>Web Views</Text>
                         </Link>.
                     </Text>
-                    <Text css={{color: '#fff' }} size={18} blockquote css={{ margin: '10px 0 25px 0', color: '#fff' }}>
+                    <Text size={18} blockquote css={{ margin: '10px 0 25px 0', color: '#fff' }}>
                         Lo que más me encantó de esto, fue como <Text css={{fontWeight: 'bold', display: 'inline', color: '$warning', fontSize: 'inherit'}}>hacer coexistir varias aplicaciones dentro de una sola</Text>, sin importar las tecnologías en las que éstas estén hechas, así como también tener la posibilidad de estar en un equipo totalmente aislado al de la aplicación principal y gozar de total libertad e independencia en el desarrollo y despliegue de nuevas versiones.
                     </Text>
                     <Text css={{color: '#fff' }} size={18} color="rgba(255, 255, 255, 0.5)">
