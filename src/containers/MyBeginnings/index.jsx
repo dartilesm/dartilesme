@@ -3,7 +3,7 @@ import { Section, Text, Title } from "../../components/UI";
 import styles from './index.module.css';
 
 const MyBeginnings = () => {
-    const BOLD_TEXT_CSS = {
+    const boldTextStyle = {
         display: 'inline',
         color: '$warning', 
         paddingBottom: 0,
@@ -18,11 +18,11 @@ const MyBeginnings = () => {
         }
     }
 
-    const COLLAPSE_GROUP = {
+    const collapseGroupStyle = {
         padding: 0
     }
 
-    const COLLAPSE_CSS = {
+    const collapseStyle = {
         background: 'linear-gradient(90deg, rgb(4 2 2) 0%, rgba(7, 25, 63, 1) 100%) !important',
         '.nextui-collapse-title-content': {
             h3: {
@@ -37,83 +37,88 @@ const MyBeginnings = () => {
         }
     }
 
+    const defaultTextStyle = {
+        color: '$white', 
+        fontSize: 18
+    }
+
     return  <>
         <Spacer id="history" />
         <Section>
             <Title>
                 Historia
             </Title>
-            <Collapse.Group splitted css={COLLAPSE_GROUP}>
-                <Collapse css={COLLAPSE_CSS} title="Comienzos" subtitle="Descubre como inicié en el mundo del desarrollo">
-                    <Text css={{color: '#fff' }} size={18} color="rgba(255, 255, 255, 0.5)">
-                        Antes de iniciar en este mundo del desarrollo web, me dedicaba a hacer videos en youtube sobre videojuegos, en esos momentos aprendí a editar videos, para ello solía usar varias herramientas como <Text css={BOLD_TEXT_CSS}>Adobe After Effects, Sony Vegas Pro, Camtasia,</Text> además para crear las miniaturas de los videos aprendí un poco a usar <Text css={BOLD_TEXT_CSS}>Adobe Photoshop.</Text>
+            <Collapse.Group splitted css={collapseGroupStyle}>
+                <Collapse css={collapseStyle} title="Comienzos" subtitle="Descubre como inicié en el mundo del desarrollo">
+                    <Text css={defaultTextStyle}>
+                        Antes de iniciar en este mundo del desarrollo web, me dedicaba a hacer videos en youtube sobre videojuegos, en esos momentos aprendí a editar videos, para ello solía usar varias herramientas como <Text css={boldTextStyle}>Adobe After Effects, Sony Vegas Pro, Camtasia,</Text> además para crear las miniaturas de los videos aprendí un poco a usar <Text css={boldTextStyle}>Adobe Photoshop.</Text>
                     </Text>
-                    <Text css={{color: '#fff' }} size={18} color="rgba(255, 255, 255, 0.5)">
-                        Seguramente te estarás preguntando, como fue la transición del mundo de YouTube a desarrollador, pues verás, yo <Text css={BOLD_TEXT_CSS}>soy una persona inconforme, siempre quiero aprender o crear cosas nuevas,</Text> por lo cual quise crear una página web para mi canal en el que yo pueda publicar mi propio contenido, pueda tener control sobre ella y mejor aún, anexar mis videos de youtube y que se actualicen automaticamente. 
+                    <Text css={defaultTextStyle}>
+                        Seguramente te estarás preguntando, como fue la transición del mundo de YouTube a desarrollador, pues verás, yo <Text css={boldTextStyle}>soy una persona inconforme, siempre quiero aprender o crear cosas nuevas,</Text> por lo cual quise crear una página web para mi canal en el que yo pueda publicar mi propio contenido, pueda tener control sobre ella y mejor aún, anexar mis videos de youtube y que se actualicen automaticamente. 
                     </Text>
-                    <Text css={{color: '#fff' }} size={18} color="rgba(255, 255, 255, 0.5)">
+                    <Text css={defaultTextStyle}>
                         Si bien esa era mi idea inicial, no tenía idea de como hacerlo así que empece a buscar videos en YouTube de como crear tu propia página web, hasta que encontré una página para crear páginas web llamada <Link color icon href="https://www.wix.com/" rel="noreferrer noopener" target="_blank">
-                            <Text css={{...BOLD_TEXT_CSS, color: '$primary'}}>Wix</Text>
+                            <Text css={{...boldTextStyle, color: '$primary'}}>Wix</Text>
                         </Link>. 
 
-                        Yo estaba muy emocionado porque estaba creando algo propio con mis propias manos, era básicamente como mi <Text css={BOLD_TEXT_CSS}>"pequeña marca personal".</Text> A medida que iba pasando el tiempo yo sentía la necesidad de agregar más y más cosas, hasta el punto en el que Wix &nbsp;
+                        Yo estaba muy emocionado porque estaba creando algo propio con mis propias manos, era básicamente como mi <Text css={boldTextStyle}>"pequeña marca personal".</Text> A medida que iba pasando el tiempo yo sentía la necesidad de agregar más y más cosas, hasta el punto en el que Wix &nbsp;
                         
                         <Tooltip className={styles.tooltip} content="No recuerdo puntualmente que era, pero estaba relacionado con los videos de YouTube." color="primary">
-                            <Text css={{ textDecoration: 'underline', ...BOLD_TEXT_CSS }}>
+                            <Text css={{ textDecoration: 'underline', ...boldTextStyle }}>
                                 no me permitía hacer lo que quería hacer
                             </Text>
                         </Tooltip> y tampoco encontraba videos que me ayudaran con eso.
                     </Text>
-                    <Text css={{color: '#fff' }} size={18} color="rgba(255, 255, 255, 0.5)">
-                        Así que continué buscando en Internet como hacerlo, y me di cuenta que lo que yo quería hacer se podía pero con código y por desgracia no me daba tanta libertad como para utilizar código. Así que <Text css={BOLD_TEXT_CSS}>no desistí,</Text> y empece a buscar una solución, y la que encontré fue haciendo la página que había creado con Wix pero con HTML y CSS puro. Una vez que obtuve el mismo resultado visual de la página de WIX con la que realice desde cero, experimenté usando el código que había encontrado.
+                    <Text css={defaultTextStyle}>
+                        Así que continué buscando en Internet como hacerlo, y me di cuenta que lo que yo quería hacer se podía pero con código y por desgracia no me daba tanta libertad como para utilizar código. Así que <Text css={boldTextStyle}>no desistí,</Text> y empece a buscar una solución, y la que encontré fue haciendo la página que había creado con Wix pero con HTML y CSS puro. Una vez que obtuve el mismo resultado visual de la página de WIX con la que realice desde cero, experimenté usando el código que había encontrado.
                     </Text>
-                    <Text css={{color: '#fff' }} size={18} color="rgba(255, 255, 255, 0.5)">
+                    <Text css={defaultTextStyle}>
                         A partir de ahí empece a tener curiosidad por crear páginas web, poco a poco me fui empapando a tal punto de conseguir la suficiente experienca para conseguir <Tooltip className={styles.tooltip} content="Para este momento tenía conocimientos básicos en HTML, CSS y jQuery" color="primary">
-                            <Text css={{ textDecoration: 'underline', ...BOLD_TEXT_CSS }}>mi primer trabajo en mi país natal Venezuela.</Text>
+                            <Text css={{ textDecoration: 'underline', ...boldTextStyle }}>mi primer trabajo en mi país natal Venezuela.</Text>
                         </Tooltip>
                     </Text>
                 </Collapse>
-                <Collapse css={COLLAPSE_CSS} title="Aprendizaje" subtitle="¿Qué he aprendido estos últimos años?">
-                    <Text css={{color: '#fff' }} size={18} color="rgba(255, 255, 255, 0.5)">
+                <Collapse css={collapseStyle} title="Aprendizaje" subtitle="¿Qué he aprendido estos últimos años?">
+                    <Text css={defaultTextStyle}>
                         Continuando con la linea de la historia, en mi primer trabajo tuve la oportunidad de aprender <Link color="warning" icon href="https://angularjs.org/" rel="noreferrer noopener" target="_blank">
-                            <Text css={{...BOLD_TEXT_CSS, color: '$warning'}}>AngularJS</Text>
+                            <Text css={boldTextStyle}>AngularJS</Text>
                         </Link> y <Link color="warning" icon href="https://angular.io/" rel="noreferrer noopener" target="_blank">
-                            <Text css={{...BOLD_TEXT_CSS, color: '$warning'}}>Angular 2</Text>
-                        </Link> con ambas tecnologías participé en el desarrollo de una <Text css={BOLD_TEXT_CSS}>aplicación de telecomunicaciones trabajando con manejo de datos en tiempo real,</Text> mostrando datos historicos y demás. También participé en un proyecto de <Text css={BOLD_TEXT_CSS}>Elearning.</Text>
+                            <Text css={boldTextStyle}>Angular 2</Text>
+                        </Link> con ambas tecnologías participé en el desarrollo de una <Text css={boldTextStyle}>aplicación de telecomunicaciones trabajando con manejo de datos en tiempo real,</Text> mostrando datos historicos y demás. También participé en un proyecto de <Text css={boldTextStyle}>Elearning.</Text>
                     </Text>
-                    <Text css={{color: '#fff' }} size={18} color="rgba(255, 255, 255, 0.5)">
-                        Al cabo de 1 año aproximadamente tuve que dejar mi país para llegar a Argentina, en donde tuve la oportunidad de trabajar con Angular 5 en un proyecto para un <Text css={BOLD_TEXT_CSS}>call center.</Text> Luego de 2 años, cambié de proyecto a uno destinado a la parte de atención al cliente por chat el cual fue desarrollado en el Frontend con <Link color="warning" icon href="https://en.reactjs.org/" rel="noreferrer noopener" target="_blank">
-                            <Text css={{...BOLD_TEXT_CSS, color: '$warning'}}>
+                    <Text css={defaultTextStyle}>
+                        Al cabo de 1 año aproximadamente tuve que dejar mi país para llegar a Argentina, en donde tuve la oportunidad de trabajar con Angular 5 en un proyecto para un <Text css={boldTextStyle}>call center.</Text> Luego de 2 años, cambié de proyecto a uno destinado a la parte de atención al cliente por chat el cual fue desarrollado en el Frontend con <Link color="warning" icon href="https://en.reactjs.org/" rel="noreferrer noopener" target="_blank">
+                            <Text css={boldTextStyle}>
                                 React.
                             </Text>
                         </Link> En esta etapa una de las cosas que aprendí fue el concepto de <Link color="warning" icon href="https://micro-frontends.org/" rel="noreferrer noopener" target="_blank">
-                            <Text css={{...BOLD_TEXT_CSS, color: '$warning'}}>micro frontends,</Text>
-                        </Link> gracias a esta arquitectura pudimos <Text css={BOLD_TEXT_CSS}>incrustar el chat dentro de una aplicación monolitica construida en AngularJS.</Text> También pudimos hacerlo dentro de las aplicaciones móviles con código nátivo, esta vez utilizando <Link color="warning" icon href="https://developer.android.com/reference/android/webkit/WebView/" rel="noreferrer noopener" target="_blank">
-                            <Text css={{...BOLD_TEXT_CSS, color: '$warning'}}>Web Views</Text>
+                            <Text css={boldTextStyle}>micro frontends,</Text>
+                        </Link> gracias a esta arquitectura pudimos <Text css={boldTextStyle}>incrustar el chat dentro de una aplicación monolitica construida en AngularJS.</Text> También pudimos hacerlo dentro de las aplicaciones móviles con código nátivo, esta vez utilizando <Link color="warning" icon href="https://developer.android.com/reference/android/webkit/WebView/" rel="noreferrer noopener" target="_blank">
+                            <Text css={boldTextStyle}>Web Views</Text>
                         </Link>.
                     </Text>
-                    <Text size={18} blockquote css={{ margin: '10px 0 25px 0', color: '#fff' }}>
+                    <Text blockquote css={{ margin: '10px 0 25px 0',  ...defaultTextStyle }}>
                         Lo que más me encantó de esto, fue como <Text css={{fontWeight: 'bold', display: 'inline', color: '$warning', fontSize: 'inherit', lineHeight: 'inherit'}}>hacer coexistir varias aplicaciones dentro de una sola</Text>, sin importar las tecnologías en las que éstas estén hechas, así como también tener la posibilidad de estar en un equipo totalmente aislado al de la aplicación principal y gozar de total libertad e independencia en el desarrollo y despliegue de nuevas versiones.
                     </Text>
-                    <Text css={{color: '#fff' }} size={18} color="rgba(255, 255, 255, 0.5)">
+                    <Text css={defaultTextStyle}>
                         Paralelamente a mi trabajo, estoy trabajando en mi propio blog el cual está hecho con <Link color="warning" icon href="https://svelte.dev/" rel="noreferrer noopener" target="_blank">
-                            <Text css={{...BOLD_TEXT_CSS, color: '$warning'}}>Svelte</Text>
+                            <Text css={boldTextStyle}>Svelte</Text>
                         </Link> (el cual debes haber visto en mis <Link color icon href="#projects">proyectos destacados</Link>) y aunque al momento de escribir esto, el backend en el que estoy trabajando no está conectado a él, estoy utilizando <Link color="warning" icon href="https://nestjs.com/" rel="noreferrer noopener" target="_blank">
-                            <Text css={{...BOLD_TEXT_CSS, color: '$warning'}}>NestJS</Text>
+                            <Text css={boldTextStyle}>NestJS</Text>
                         </Link> para crear las sesiones y la posiblidad crear contenido directamente desde el blog.
                     </Text>
-                    <Text css={{color: '#fff' }} size={18} color="rgba(255, 255, 255, 0.5)">
+                    <Text css={defaultTextStyle}>
                         Además también tengo bastante tiempo trabajando como freelance en <Link color icon href="https://www.workana.com/freelancer/b4aebd5f18465eb956a6404f3f3d5995" rel="noreferrer noopener" target="_blank">Workana</Link>, 
                         
                         desde que empecé siempre estuve en el area móvil, esta vez utilizando  <Link color="warning" icon href="https://ionicframework.com/" rel="noreferrer noopener" target="_blank">
-                            <Text css={{...BOLD_TEXT_CSS, color: '$warning'}}>Ionic 3</Text>
+                            <Text css={boldTextStyle}>Ionic 3</Text>
                         </Link> y <Link color="warning" icon href="https://reactnative.dev/" rel="noreferrer noopener" target="_blank">
-                            <Text css={{...BOLD_TEXT_CSS, color: '$warning'}}>React Native</Text>
+                            <Text css={boldTextStyle}>React Native</Text>
                         </Link> para desarrollar las aplicaciones.
                     </Text>
-                    <Text css={{color: '#fff' }} size={18} color="rgba(255, 255, 255, 0.5)">
+                    <Text css={defaultTextStyle}>
                         Por último al día de hoy, en mi empleo actual estoy trabajando con <Link color="warning" icon href="https://vuejs.org/" rel="noreferrer noopener" target="_blank">
-                            <Text css={{...BOLD_TEXT_CSS, color: '$warning'}}>VueJS</Text>
+                            <Text css={boldTextStyle}>VueJS</Text>
                         </Link> en un proyecto de ecommerce.
                     </Text>
                 </Collapse>

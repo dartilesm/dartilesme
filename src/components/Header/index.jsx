@@ -52,7 +52,7 @@ const Header = () => {
 
     return (
         <Grid className={styles.header}>
-            <Section main className={styles.headerContainer}>
+            <Section main css={{ width: '100%' }}>
                 <Row align="center">
                     <Col className={styles.logoContainer} span={2}>
                         <img src="./logo3.png" alt="logo" width={40} />

@@ -6,7 +6,19 @@ import reportWebVitals from './reportWebVitals';
 import { NextUIProvider, createTheme } from '@nextui-org/react';
 
 const darkTheme = createTheme({
-  type: 'dark'
+  type: 'dark',
+  theme: {
+    colors: {
+      textPrimary: '#8193b2'
+    },
+    fonts: {
+      spaceGrotesk: "'Space Grotesk', sans-serif"
+    },
+    sizes: {
+      small: '1040px',
+      medium: '1200px'
+    }
+  }
 })
 
 

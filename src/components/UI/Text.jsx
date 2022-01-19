@@ -1,30 +1,28 @@
-import { Text as NextText } from '@nextui-org/react'
-import styles from './ui.module.css'
+import { styled, Text as NextUIText } from '@nextui-org/react'
 
-const Text = ({ children, className = '', size, color, css, ...props }) => {
-    const textStyle = {
-        lineHeight: size ? `${size * 1.5}px` : '40px',
-        fontSize: size || '26px',
-        fontWeight: 400,
-        letterSpacing: '0px',
-        paddingBottom: '24px',
-        margin: 0,
-        '@mdMax': {
-            fontSize: size ? `${size}px` : '22px',
-            lineHeight: size ? `${size * 1.5}px` : '32px',
-            paddingBottom: '24px'
-        },
-        '@smMax': {
-            fontSize: size ? `${size * .8}px` : '16px',
-            lineHeight: size ? `${size * 1.3}px` : '24px',
-            paddingBottom: '16px'
-        },
-        ...css,
+const textStyles = {
+    color: '$textPrimary',
+    fontSize: 'calc($tiny + $xs)',
+    fontWeight: '$normal',
+    letterSpacing: '$normal',
+    paddingBottom: '$10',
+    margin: 0,
+    '@mdMax': {
+        fontSize: 'calc($lg - $base)',
+        paddingBottom: '$10'
+    },
+    '@smMax': {
+        fontSize: '$base',
+        paddingBottom: '$md'
     }
+}
 
-    return <NextText color={color || '#8193b2'} {...props} className={`${styles.text} ${className}`} css={textStyle}>
+
+const Text = ({ children, className = '', css = {}, ...props }) => {
+
+    return <NextUIText {...props} className={`${className}`} css={{...textStyles, ...css}}>
         {children}
-    </NextText>
+    </NextUIText>
 }
 
 export default Text

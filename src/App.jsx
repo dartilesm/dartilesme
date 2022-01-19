@@ -1,17 +1,27 @@
-import { Container } from '@nextui-org/react';
-import { useEffect, useRef, useState } from 'react';
+import { Container, globalCss } from '@nextui-org/react';
 import styles from './app.module.css';
-import Header from './components/Header';
 import AboutMe from './containers/AboutMe';
-import MainBackground from './containers/MainBackground';
+import Header from './components/Header';
 import MyBeginnings from './containers/MyBeginnings';
 import Presentation from './containers/Presentation';
 import Projects from './containers/Projects';
 import Technologies from './containers/Technologies';
+import MainBackground from './containers/MainBackground';
+import { useEffect, useRef, useState } from 'react';
+
+const globalStyles = globalCss({
+  '*': {
+    fontFamily: '$spaceGrotesk'
+  },
+  body: {
+    backgroundColor: '#020c20'
+  }
+})
 
 const App = () => {
   const [isStickyBackground, setIsStickyBackground] = useState(false)
   const backgroundRef = useRef()
+  globalStyles()
 
   useEffect(() => {
     window.addEventListener('scroll', handleStickyBackground)

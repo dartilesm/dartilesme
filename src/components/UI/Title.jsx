@@ -1,15 +1,52 @@
+import { styled } from "@nextui-org/react";
 import Divider from "./Divider";
-import styles from './ui.module.css'
 
-const Title = ({ children, main }) => <>
+
+const commomStyles = {
+    backgroundClip: 'text',
+    boxDecorationBreak: 'clone',
+    '-webkit-background-clip': 'text',
+    '-webkit-text-fill-color': 'transparent',
+    '-webkit-box-decoration-break': 'clone',
+    fontWeight: '$extrabold',
+    lineHeight: '$sm',
+    letterSpacing: '$normal',
+    padding: '0 0 $12'
+}
+
+const TitleStyled = styled('h2', {
+    background: '-webkit-linear-gradient(-70deg, #ff7170 0%, #ffe57f 100%)',
+    fontSize: 'calc($sm + $lg)',
+    ...commomStyles,
+    '@smMax': {
+        fontSize: '$xl',
+        padding: '0 0 $sm'
+    },
+    '@xsMax': {
+        fontSize: 'calc($sm + $tiny)',
+        padding: '0 0 $xs'
+    },
+})
+
+
+const MainTitleStyled = styled('h1', {
+    background: '-webkit-linear-gradient(-70deg, #3bf0e4 0%, #bca1f7 100%)',
+    fontSize: 'calc($xl + $base)',
+    ...commomStyles,
+    '@smMax': {
+        fontSize: 'calc($sm + $lg)',
+        padding: '$md 0 $xs',
+        lineHeight: '$xs'
+    },
+    '@xsMax': {
+        fontSize: 'calc($md + $base)',
+        padding: '0 0 $xs'
+    },
+})
+
+const Title = ({ children, main, css }) => <>
     { !main && <Divider /> }
-    {
-        !main ? <h2 className={`${styles.title} ${main ? styles.main : ''}`}>
-            {children}
-        </h2> : <h1 className={`${styles.title} ${main ? styles.main : ''}`}>
-            {children}
-        </h1>
-    }
+    { !main ? <TitleStyled css={css}>{children}</TitleStyled> : <MainTitleStyled css={css}>{children}</MainTitleStyled> }
 </>
 
 export default Title

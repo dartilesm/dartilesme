@@ -1,7 +1,27 @@
-import styles from './ui.module.css'
+import { styled } from '@nextui-org/react'
 
-const Subtitle = ({ children, className = '' }) => <h3 className={`${styles.subtitle} ${className}`}>
+const SubtitleStyled = styled('h3', {
+    fontSize: 'calc($base + $xs)',
+    lineHeight: '$xs',
+    letterSpacing: '$normal',
+    background: '-webkit-linear-gradient(-70deg, #3bf0e4 0%, #bca1f7 100%)',
+    backgroundClip: 'text',
+    boxDecorationBreak: 'clone',
+    '-webkit-background-clip': 'text',
+    '-webkit-text-fill-color': 'transparent',
+    '-webkit-box-decoration-break': 'clone',
+    padding: '0 0 $12',
+    '@smMax': {
+        fontSize: '$md',
+        padding: '0 0 $10'
+    },
+    '@xsMax': {
+        fontSize: 'calc($lg - $xs)',
+    }
+})
+
+const Subtitle = ({ children }) => <SubtitleStyled>
     {children}
-</h3>
+</SubtitleStyled>
 
 export default Subtitle
