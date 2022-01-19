@@ -1,13 +1,13 @@
 import { Container } from '@nextui-org/react';
+import { useEffect, useRef, useState } from 'react';
 import styles from './app.module.css';
-import AboutMe from './containers/AboutMe';
 import Header from './components/Header';
+import AboutMe from './containers/AboutMe';
+import MainBackground from './containers/MainBackground';
 import MyBeginnings from './containers/MyBeginnings';
 import Presentation from './containers/Presentation';
 import Projects from './containers/Projects';
 import Technologies from './containers/Technologies';
-import MainBackground from './containers/MainBackground';
-import { useEffect, useRef, useState } from 'react';
 
 const App = () => {
   const [isStickyBackground, setIsStickyBackground] = useState(false)
