@@ -1,4 +1,4 @@
-import { styled, Text as NextUIText } from '@nextui-org/react'
+import { Text as NextUIText } from '@nextui-org/react'
 
 const textStyles = {
     color: '$textPrimary',
