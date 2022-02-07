@@ -8,6 +8,7 @@ import Projects from './containers/Projects';
 import Technologies from './containers/Technologies';
 import MainBackground from './containers/MainBackground';
 import { useEffect, useRef, useState } from 'react';
+import useScrollPosition from './hooks/useScrollPosition';
 
 const globalStyles = globalCss({
   '*': {
@@ -19,28 +20,19 @@ const globalStyles = globalCss({
 })
 
 const App = () => {
-  const [isStickyBackground, setIsStickyBackground] = useState(false)
-  const backgroundRef = useRef()
+  const backgroundRef = useRef({})
+  const [isOnScrollPosition, updateScrollPosition] = useScrollPosition({ scrollPos: backgroundRef.current?.offsetTop })
   globalStyles()
 
   useEffect(() => {
-    window.addEventListener('scroll', handleStickyBackground)
-    return () => window.removeEventListener('scroll', handleStickyBackground)
-  }, [])
-
-  const handleStickyBackground = () => {
-    const { current: backgroundElement } = backgroundRef
-    
-    const isSticky = window.scrollY >= backgroundElement.offsetTop
-    
-    setIsStickyBackground(isSticky)
-  }
+    updateScrollPosition(backgroundRef.current?.offsetTop)
+  }, [backgroundRef.current.offsetTop])
 
   return (
     <>
       <Header />
       <Container className={styles.mainContent}>
-        <MainBackground ref={backgroundRef} sticky={isStickyBackground} />
+        <MainBackground ref={backgroundRef} sticky={isOnScrollPosition} />
         <Presentation />
         <AboutMe />
         <Projects />

@@ -1,8 +1,16 @@
-import { Button, Col, Grid, Link, Row, Text } from "@nextui-org/react"
+import { Row, Text } from "@nextui-org/react"
 import { useState } from "react"
 import { FiGithub, FiLinkedin, FiMenu, FiTwitter, FiX } from "react-icons/fi"
+import useScrollPosition from "../../hooks/useScrollPosition"
 import { Section } from '../UI'
-import styles from './index.module.css'
+import {
+    DesktopMenuContainerStyled,
+    desktopMenuItemsStyles, HeaderStyled,
+    LogoContainerStyled,
+    MenuContainerStyled, MenuLinksStyled, MobileMenuButtonStyled,
+    MobileMenuContainerStyled,
+    MobileMenuGridStyled, ResumeButtonStyled
+} from './styles'
 
 
 const MENU_ITEMS = [
@@ -44,77 +52,86 @@ const MENU_LINKS = [
 
 const Header = () => {
     const [isOpenMenu, setIsOpenMenu] = useState(false)
-
+    const [isOnScrollPosition] = useScrollPosition({ scrollPos: 860 })
     const downloadCV = () => { 
         setIsOpenMenu(!isOpenMenu)
         window.open('/cv.pdf', '_blank') 
     }
 
     return (
-        <Grid className={styles.header}>
+        <HeaderStyled blur={isOnScrollPosition}>
             <Section main css={{ width: '100%' }}>
                 <Row align="center">
-                    <Col className={styles.logoContainer} span={2}>
+                    <LogoContainerStyled span={2}>
                         <img src="./logo3.png" alt="logo" width={40} />
-                    </Col>
-                    <Col className={styles.menuContainer}>
-                        <Grid md={0} className={styles.mobileMenuButton} onClick={() => setIsOpenMenu(!isOpenMenu)}>
-                            <Text color="white" size="1.2rem">
+                    </LogoContainerStyled>
+                    <MenuContainerStyled>
+                        <MobileMenuButtonStyled md={0}  onClick={() => setIsOpenMenu(!isOpenMenu)}>
+                            <Text color="white" size="1.2rem" css={{ display: 'inline-flex', padding: '$sm' }}>
                                 { isOpenMenu ? <FiX size={30} /> : <FiMenu size={30} /> }
                             </Text>
-                        </Grid>
-                        <Grid className={`${styles.mobileMenuContainer} ${isOpenMenu ? styles.open : ''}`} md={0}>
-                            <Grid>
+                        </MobileMenuButtonStyled>
+                        <MobileMenuContainerStyled open={isOpenMenu} md={0}>
+                            <MobileMenuGridStyled>
                                 {
                                     MENU_ITEMS.map(({ name, href }) => 
-                                        <Text color="white" size="1.2rem" key={name} onClick={() => setIsOpenMenu(!isOpenMenu)}>
-                                            <Link href={href}>
+                                        <Text size="1.2rem" key={name} css={{ padding: '$sm' }}onClick={() => setIsOpenMenu(!isOpenMenu)}>
+                                            <MenuLinksStyled mobile href={href}>
                                                 {name}
-                                            </Link>
+                                            </MenuLinksStyled>
                                         </Text>
                                     )
                                 }
                                 {
                                     MENU_LINKS.map(({ name, icon, href }) => 
-                                        <Text color="white" size="1.2rem" className={styles.links} key={name} onClick={() => setIsOpenMenu(!isOpenMenu)}>
-                                            <Link href={href} target="_blank" rel="noreferer">
+                                        <Text size="1.2rem" css={{
+                                            ...desktopMenuItemsStyles,
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            padding: '$sm'
+                                        }} key={name} onClick={() => setIsOpenMenu(!isOpenMenu)}>
+                                            <MenuLinksStyled mobile href={href} target="_blank" rel="noreferer">
                                                 {icon}
-                                            </Link>
+                                            </MenuLinksStyled>
                                         </Text>
                                     )
                                 }
-                                <Button auto rounded className={styles.resumeButtton} onClick={downloadCV}>
+                                <ResumeButtonStyled auto rounded onClick={downloadCV}>
                                     Descargar CV
-                                </Button>
-                            </Grid>
-                        </Grid>
-                        <Grid xs={0} md={12} className={styles.desktopMenuContainer}>
+                                </ResumeButtonStyled>
+                            </MobileMenuGridStyled>
+                        </MobileMenuContainerStyled>
+                        <DesktopMenuContainerStyled xs={0} md={12}>
                             {
                                 MENU_ITEMS.map(({ name, href }) => 
-                                    <Text color="white" size="1.2rem" key={name}>
-                                        <Link href={href}>
+                                    <Text css={desktopMenuItemsStyles} size="1.2rem" key={name}>
+                                        <MenuLinksStyled href={href}>
                                             {name}
-                                        </Link>
+                                        </MenuLinksStyled>
                                     </Text>
                                 )
                             }
                             {
                                 MENU_LINKS.map(({ name, icon, href }) => 
-                                    <Text color="white" size="1.2rem" className={styles.links} key={name}>
-                                        <Link href={href} target="_blank" rel="noreferer">
+                                    <Text css={{
+                                            ...desktopMenuItemsStyles,
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                        }} size="1.2rem" key={name}>
+                                        <MenuLinksStyled href={href} target="_blank" rel="noreferer">
                                             {icon}
-                                        </Link>
+                                        </MenuLinksStyled>
                                     </Text>
                                 )
                             }
-                            <Button auto rounded className={styles.resumeButtton} onClick={downloadCV}>
+                            <ResumeButtonStyled auto rounded onClick={downloadCV}>
                                 Descargar CV
-                            </Button>
-                        </Grid>
-                    </Col>
+                            </ResumeButtonStyled>
+                        </DesktopMenuContainerStyled>
+                    </MenuContainerStyled>
                 </Row>
             </Section>
-        </Grid>
+        </HeaderStyled>
     )
 }
 

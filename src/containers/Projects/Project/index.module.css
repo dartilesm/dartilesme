@@ -29,11 +29,6 @@
     width: 100%;
 }
 
-.projectInfoContainer {
-    display: flex;
-    align-items: flex-end;
-}
-
 
 .projectInfo {
     position: absolute;
