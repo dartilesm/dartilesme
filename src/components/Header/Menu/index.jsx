@@ -52,10 +52,6 @@ const MenuItems = ({ items, mobile, onItemClick }) => {
 
 const Menu = ({ links, items }) => {
     const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false)
-    const downloadCV = () => { 
-        setIsOpenMobileMenu(!isOpenMobileMenu)
-        window.open('/cv.pdf', '_blank') 
-    }
     return (
         <>
           <StyledLogoContainer span={2}>
