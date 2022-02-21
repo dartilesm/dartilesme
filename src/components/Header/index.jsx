@@ -1,5 +1,4 @@
 import { Row } from "@nextui-org/react"
-import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi"
 import { SOCIAL_MEDIA_LIST } from "../../constants/social-medias"
 import useScrollPosition from "../../hooks/useScrollPosition"
 import { Section } from '../UI'

@@ -1,19 +1,19 @@
+import { Link } from "@nextui-org/react";
 import { useState } from "react";
 import { FiDownload, FiMenu, FiX } from "react-icons/fi";
+import Logo from '../../../assets/logo.png';
 import { Text } from "../../UI";
 import {
-    StyledDesktopMenuContainer,
-    StyledDesktopMenuItems,
-    StyledLogoContainer,
-    StyledMenuContainer,
-    StyledMenuLinks,
-    StyledMobileMenuButton,
-    StyledMobileMenuContainer,
-    StyledMobileMenuGrid,
-    StyledResumeButton
+  StyledDesktopMenuContainer,
+  StyledDesktopMenuItems,
+  StyledLogoContainer,
+  StyledMenuContainer,
+  StyledMenuLinks,
+  StyledMobileMenuButton,
+  StyledMobileMenuContainer,
+  StyledMobileMenuGrid,
+  StyledResumeButton
 } from "../styles";
-import Logo from '../../../assets/logo.png'
-import { Link } from "@nextui-org/react";
 
 const MenuLinks = ({ links, mobile, onItemClick }) => {
     return <>
