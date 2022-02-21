@@ -113,5 +113,6 @@ export const StyledMenuLinks = styled(Link, {
 })
 
 export const StyledResumeButton = styled(Button, {
-    margin: '0 1rem'
+    margin: '0 1rem',
+    minWidth: '160px !important'
 })

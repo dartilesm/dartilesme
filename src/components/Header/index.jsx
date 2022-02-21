@@ -1,5 +1,6 @@
 import { Row } from "@nextui-org/react"
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi"
+import { SOCIAL_MEDIA_LIST } from "../../constants/social-medias"
 import useScrollPosition from "../../hooks/useScrollPosition"
 import { Section } from '../UI'
 import Menu from "./Menu"
@@ -25,24 +26,6 @@ const MENU_ITEMS = [
     }
 ]
 
-const MENU_LINKS = [
-    {
-        name: 'Github',
-        href: 'https://github.com/dartilesm',
-        icon: <FiGithub size={20} />
-    },
-    {
-        name: 'LinkedIn',
-        href: 'https://linkedin.com/in/dartiles',
-        icon: <FiLinkedin size={20} />
-    },
-    {
-        name: 'Twitter',
-        href: 'https://twitter.com/intent/follow?screen_name=dartilesm',
-        icon: <FiTwitter size={20} />
-    }
-]
-
 const Header = () => {
     const [isOnScrollPosition] = useScrollPosition({ scrollPos: 860 })
 
@@ -50,7 +33,7 @@ const Header = () => {
         <StyledHeader blur={isOnScrollPosition}>
             <Section main css={{ width: '100%' }}>
                 <Row align="center">
-                    <Menu links={MENU_LINKS} items={MENU_ITEMS} />
+                    <Menu links={SOCIAL_MEDIA_LIST} items={MENU_ITEMS} />
                 </Row>
             </Section>
         </StyledHeader>

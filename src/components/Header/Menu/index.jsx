@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FiMenu, FiX } from "react-icons/fi";
+import { FiDownload, FiMenu, FiX } from "react-icons/fi";
 import { Text } from "../../UI";
 import {
     StyledDesktopMenuContainer,
@@ -13,6 +13,7 @@ import {
     StyledResumeButton
 } from "../styles";
 import Logo from '../../../assets/logo.png'
+import { Link } from "@nextui-org/react";
 
 const MenuLinks = ({ links, mobile, onItemClick }) => {
     return <>
@@ -74,17 +75,21 @@ const Menu = ({ links, items }) => {
               <StyledMobileMenuGrid>
                 <MenuItems items={items} mobile onItemClick={() => setIsOpenMobileMenu(!isOpenMobileMenu)} />                
                 <MenuLinks links={links} mobile onItemClick={() => setIsOpenMobileMenu(!isOpenMobileMenu)} />
-                <StyledResumeButton auto rounded onClick={downloadCV}>
-                  Descargar CV
-                </StyledResumeButton>
+                <Link href="cv.pdf" download onClick={() => setIsOpenMobileMenu(!isOpenMobileMenu)}>
+                    <StyledResumeButton rounded iconRight={<FiDownload color="white" />}>
+                      Descargar CV
+                    </StyledResumeButton>
+                </Link>
               </StyledMobileMenuGrid>
             </StyledMobileMenuContainer>
             <StyledDesktopMenuContainer xs={0} md={12}>
                 <MenuItems items={items} onItemClick={() => setIsOpenMobileMenu(!isOpenMobileMenu)} />
                 <MenuLinks links={links} onItemClick={() => setIsOpenMobileMenu(!isOpenMobileMenu)} />
-              <StyledResumeButton auto rounded onClick={downloadCV}>
-                Descargar CV
-              </StyledResumeButton>
+                <Link href="cv.pdf" download onClick={() => setIsOpenMobileMenu(!isOpenMobileMenu)}>
+                  <StyledResumeButton rounded iconRight={<FiDownload color="white" />}>
+                    Descargar CV
+                  </StyledResumeButton>
+                </Link>
             </StyledDesktopMenuContainer>
           </StyledMenuContainer>
         </>
