@@ -1,6 +1,6 @@
-import { Button, Col, Grid, Link, styled } from "@nextui-org/react"
+import { Button, Col, Grid, Link, styled, StyledText } from "@nextui-org/react"
 
-export const HeaderStyled = styled(Grid, {
+export const StyledHeader = styled(Grid, {
     display: 'flex',
     alignItems: 'center',
     height: '70px',
@@ -25,7 +25,7 @@ export const HeaderStyled = styled(Grid, {
     }
 })
 
-export const LogoContainerStyled = styled(Col, {
+export const StyledLogoContainer = styled(Col, {
     display: 'flex',
     alignItems: 'center',
     cursor: 'pointer',
@@ -33,14 +33,14 @@ export const LogoContainerStyled = styled(Col, {
     padding: '$xs 0'
 })
 
-export const MenuContainerStyled = styled(Col, {
+export const StyledMenuContainer = styled(Col, {
     display: 'flex',
     justifyContent: 'flex-end',
     alignItems: 'flex-end',
     flexDirection: 'column'
 })
 
-export const MobileMenuButtonStyled = styled(Grid, {
+export const StyledMobileMenuButton = styled(Grid, {
     position: 'absolute',
     display: 'flex',
     alignItems: 'center',
@@ -50,7 +50,7 @@ export const MobileMenuButtonStyled = styled(Grid, {
     zIndex: 1,
 })
 
-export const MobileMenuContainerStyled = styled(Grid, {
+export const StyledMobileMenuContainer = styled(Grid, {
     padding: 'calc($18 + $xs) 0',
     height: '100vh',
     top: '0',
@@ -73,7 +73,7 @@ export const MobileMenuContainerStyled = styled(Grid, {
     }
 })
 
-export const MobileMenuGridStyled = styled(Grid, {
+export const StyledMobileMenuGrid = styled(Grid, {
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'column',
@@ -82,12 +82,12 @@ export const MobileMenuGridStyled = styled(Grid, {
     padding: '$xs 0',
 })
 
-export const DesktopMenuContainerStyled = styled(Grid, {
+export const StyledDesktopMenuContainer = styled(Grid, {
     display: 'flex',
     alignItems: 'center',
 })
 
-export const desktopMenuItemsStyles =  {
+export const StyledDesktopMenuItems =  styled(StyledText, {
     cursor: 'pointer',
     padding: '$sm',
     borderRadius: '10px',
@@ -95,9 +95,9 @@ export const desktopMenuItemsStyles =  {
     display: 'flex',
     alignItems: 'center',
     color: '#8193b2'
-}
+})
 
-export const MenuLinksStyled = styled(Link, {
+export const StyledMenuLinks = styled(Link, {
     color: '#8193b2 !important',
     '&:hover': {
         color: '#efefef !important',
@@ -112,6 +112,6 @@ export const MenuLinksStyled = styled(Link, {
     }
 })
 
-export const ResumeButtonStyled = styled(Button, {
+export const StyledResumeButton = styled(Button, {
     margin: '0 1rem'
 })
