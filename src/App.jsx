@@ -4,7 +4,7 @@ import styles from './app.module.css';
 import Header from './components/Header';
 import AboutMe from './containers/AboutMe';
 import MainBackground from './containers/MainBackground';
-import MyBeginnings from './containers/MyBeginnings';
+import MyHistory from './containers/MyHistory';
 import Presentation from './containers/Presentation';
 import Projects from './containers/Projects';
 import Technologies from './containers/Technologies';
@@ -36,7 +36,7 @@ const App = () => {
         <Presentation />
         <AboutMe />
         <Projects />
-        <MyBeginnings />
+        <MyHistory />
         <Technologies />
       </Container>
     </>

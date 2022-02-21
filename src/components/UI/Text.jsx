@@ -1,6 +1,7 @@
 import { styled, StyledText as NextUIText } from "@nextui-org/react";
 
 const StyledText = styled(NextUIText, {
+  fontFamily: 'inherit',
   color: "$textPrimary",
   fontSize: "calc($tiny + $xs)",
   fontWeight: "$normal",

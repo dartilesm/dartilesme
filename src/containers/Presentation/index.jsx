@@ -1,47 +1,7 @@
-import { Button, styled } from "@nextui-org/react"
-import { Section, Text, Title } from "../../components/UI"
+import { Button } from "@nextui-org/react"
 import MeImage from '../../assets/me.png'
-import styles from './index.module.css'
-
-const sectionStyles = {
-    height: 'calc(100vh - 100px)',
-    display: 'flex',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    flexDirection: 'row',
-    '@smMax': {
-        flexDirection: 'column-reverse',
-        
-    }
-}
-
-const ImageContainerStyled = styled('div', {
-    height: '400px',
-    width: '400px',
-    position: 'relative',
-    display: 'flex',
-    justifyContent: 'center'
-})
-
-const ImageBackgroundStyled = styled('div', {
-    borderRadius: '50%',
-    background: '#060609',
-    aspectRatio: '1 / 1',
-    width: '300px',
-    height: '300px',
-    bottom: 0,
-    position: 'absolute',
-    left: '50%',
-    transform: 'translateX(-50%)',
-})
-
-const ImageStyled = styled('img', {
-    clipPath: 'ellipse(42% 46%)',
-    width: '400px',
-    height: '400px',
-    zIndex: 1,
-    objectFit: 'cover'
-})
+import { Section, Text, Title } from "../../components/UI"
+import { sectionStyles, StyledImage, StyledImageBackground, StyledImageContainer, StyledWelcomePresentation } from "./styles"
 
 
 const Presentation = () => {
@@ -51,7 +11,7 @@ const Presentation = () => {
 
     return (
         <Section css={sectionStyles} main>
-            <div className={styles.welcome}>
+            <StyledWelcomePresentation>
                 <Title main>
                     Bienvenido a mi portafolio
                 </Title>
@@ -61,11 +21,11 @@ const Presentation = () => {
                 <Button onClick={contact} size="md">
                     Contáctame
                 </Button>
-            </div>
-            <ImageContainerStyled>
-                <ImageStyled src={MeImage} alt="me" />
-                <ImageBackgroundStyled />
-            </ImageContainerStyled>
+            </StyledWelcomePresentation>
+            <StyledImageContainer>
+                <StyledImage src={MeImage} alt="me" />
+                <StyledImageBackground />
+            </StyledImageContainer>
         </Section>
     )
 }

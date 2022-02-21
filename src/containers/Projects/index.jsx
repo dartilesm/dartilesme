@@ -1,6 +1,5 @@
-import { Grid, Spacer } from "@nextui-org/react";
+import { Grid, Spacer, StyledGridContainer } from "@nextui-org/react";
 import { Section, Title } from '../../components/UI';
-import styles from './index.module.css';
 import Project from "./Project";
 
 const listOfProjects = [
@@ -22,7 +21,7 @@ const Projects = () => (
             <Title>
                 Proyectos Destacados
             </Title>
-            <Grid.Container justify="center" className={styles.projectContainer}>
+            <StyledGridContainer justify="center">
                 {
                     listOfProjects
                         .map(project => {
@@ -31,7 +30,7 @@ const Projects = () => (
                             </Grid>
                         })
                 }
-            </Grid.Container>
+            </StyledGridContainer>
         </Section>
     </>
 )
