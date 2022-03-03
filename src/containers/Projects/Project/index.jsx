@@ -21,7 +21,7 @@ const Project = ({ project, reverse }) => {
                             </Button>
                         }
                         { 
-                            project.urlCode && <ProjectLinkStyled href={project.urlCode}> 
+                            project.urlCode && <ProjectLinkStyled href={project.urlCode} target="_blank" rel="noreferrer"> 
                                 <FiGithub size={20}/>
                             </ProjectLinkStyled>
                         }
