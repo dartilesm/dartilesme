@@ -1,37 +1,36 @@
-import { Button, Row, Spacer } from "@nextui-org/react"
+import { Button, Spacer } from "@nextui-org/react"
 import { FiExternalLink, FiGithub } from 'react-icons/fi'
-import { ProjectButtonContainerStyled, ProjectImage, ProjectInfoContainerStyled, ProjectInfoStyled, ProjectLinkStyled, StyledProjectInfo } from "./styles"
+import { ProjectButtonContainerStyled, ProjectImage, ProjectInfoContainerStyled, ProjectInfoStyled, ProjectLinkStyled, StyledProjectContainer, StyledProjectInfo } from "./styles"
 
-const Project = ({ name, description, urlProject, urlCode, technologies, image }) => {
+const Project = ({ project, reverse }) => {
     const openUrl = (url) => {
         window.open(url, '_blank')
     }
 
     return <>
-        <Row align="center">
+        <StyledProjectContainer reverse={reverse}>
             <ProjectInfoContainerStyled>
-                <Spacer y={16} />
                 <ProjectInfoStyled>
-                    <StyledProjectInfo>{name}</StyledProjectInfo>
-                    <StyledProjectInfo type="technology">{technologies}</StyledProjectInfo>
-                    <StyledProjectInfo type="description">{description}</StyledProjectInfo>
+                    <StyledProjectInfo>{project.name}</StyledProjectInfo>
+                    <StyledProjectInfo type="technology">{project.technologies}</StyledProjectInfo>
+                    <StyledProjectInfo type="description">{project.description}</StyledProjectInfo>
                     <ProjectButtonContainerStyled>
                         {
-                            urlProject && <Button onClick={() => openUrl(urlProject)} rounded color="primary" iconRight={<FiExternalLink />}> 
+                            project.urlProject && <Button onClick={() => openUrl(project.urlProject)} rounded color="primary" iconRight={<FiExternalLink />}> 
                                 Ir al sitio
                             </Button>
                         }
                         { 
-                            urlCode && <ProjectLinkStyled href={urlCode}> 
+                            project.urlCode && <ProjectLinkStyled href={project.urlCode}> 
                                 <FiGithub size={20}/>
                             </ProjectLinkStyled>
                         }
                     </ProjectButtonContainerStyled>
                 </ProjectInfoStyled>
             </ProjectInfoContainerStyled>
-            <ProjectImage css={{ $$backgroundImage: `url(${image})` }}>
+            <ProjectImage css={{ $$backgroundImage: `url(${project.image})` }}>
             </ProjectImage>
-        </Row>
+        </StyledProjectContainer>
     </>
 }
 

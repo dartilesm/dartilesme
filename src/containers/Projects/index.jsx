@@ -11,6 +11,15 @@ const listOfProjects = [
         urlCode: 'https://github.com/dartilesm/dartiles.dev',
         technologies: 'Svelte',
         image: '/dartiles.dev.jpg'
+    },
+    {
+        id: 2,
+        name: 'vue-stitches',
+        description: 'Es un pequeño paquete de npm que ayuda a usar de una mejor manera Stitches en los proyectos de Vue. Stitches solo tiene una versión adapatada para React, así que para Vue estoy usando la versión Core.',
+        urlProject: 'https://www.npmjs.com/package/vue-stitches',
+        urlCode: 'https://github.com/dartilesm/vue-stitches',
+        technologies: 'Vue, Javascript',
+        image: '/vue-stitches.png'
     }
 ]
 
@@ -24,9 +33,10 @@ const Projects = () => (
             <StyledGridContainer justify="center">
                 {
                     listOfProjects
-                        .map(project => {
+                        .map((project, index) => {
+                            const isReverse = index % 2 === 0
                             return <Grid xs={12} key={project.id} direction="column">
-                                <Project {...project}/>
+                                <Project project={project} reverse={isReverse} />
                             </Grid>
                         })
                 }

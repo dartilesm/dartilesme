@@ -1,4 +1,4 @@
-import { Col, Grid, Link, styled } from "@nextui-org/react"
+import { Link, styled, StyledCol, StyledGridItem, StyledRow } from "@nextui-org/react"
 import { Text } from "../../../components/UI"
 
 export const StyledProjectInfo = styled(Text, {
@@ -25,56 +25,54 @@ export const StyledProjectInfo = styled(Text, {
     }
 })
 
-export const ProjectInfoContainerStyled = styled(Col, {
+export const ProjectInfoContainerStyled = styled(StyledCol, {
+    position: 'relative',
     display: 'flex',
     alignItems: 'flex-end',
-})
-
-export const ProjectInfoStyled = styled(Grid, {
-    position: 'absolute',
-    zIndex: 1,
-    maxWidth: '100%',
     width: '50%',
-    height: '100%',
-    minHeight: '300px',
-    '@smMax': {
-        width: '60%'
-    },
+    maxWidth: '50%',
     '@xsMax': {
-        width: '80%'
+        width: '100%',
+        maxWidth: '100%',
+        marginTop: '$10'
     }
 })
 
-export const ProjectImage = styled(Col, {
+export const ProjectInfoStyled = styled(StyledGridItem, {
+    position: 'relative',
+    zIndex: 1,
+    maxWidth: '100%',
+    width: '100%',
+    height: 'auto'
+})
+
+export const ProjectImage = styled(StyledCol, {
     position: 'relative',
     borderRadius: '$sm',
     padding: '$md',
-    border: '$light solid rgba(156, 156, 156, .9)',
-    minHeight: '$60',
+    height: '300px',
+    maxHeight: '$60',
     maxWidth: '$80',
+    width: '100%',
     '&::before': {
         content: '',
+        backgroundColor: 'transparent',
         backgroundImage: '$$backgroundImage',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
         position: 'absolute',
         top: 0,
         left: 0,
         height: '100%',
         width: '100%',
     },
-    '&::after': {
-        content: '',
-        backgroundColor: '#01011bde',
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        height: '100%',
-        width: '100%'
+    '@smMax': {
+        maxWidth: '$60'
     }
 })
 
-export const ProjectButtonContainerStyled = styled(Grid, {
+export const ProjectButtonContainerStyled = styled(StyledGridItem, {
     width: '80%',
     display: 'flex',
     justifyContent: 'flex-start',
@@ -82,12 +80,38 @@ export const ProjectButtonContainerStyled = styled(Grid, {
     position: 'relative',
     padding: 0,
     zIndex: 1,
+    marginTop: '$10',
+    gap: '$12'
 })
 
 export const ProjectLinkStyled = styled(Link, {
     color: '#efe',
-    margin: '$12',
     display: 'flex',
     lineHeight: '$md',
     justifyContent: 'center',
+})
+
+export const StyledProjectContainer = styled(StyledRow, {
+    justifyContent: 'space-between',
+    margin: '$20 0',
+    '&:first-child': {
+        marginTop: 0
+    },
+    variants: {
+        reverse: {
+            true: {
+                flexDirection: 'row-reverse',
+                '@xsMax': {
+                    flexDirection: 'column-reverse',
+                }
+            }
+        }
+    },
+    '@smMax': {
+        alignItems: 'center'
+    },
+    '@xsMax': {
+        flexDirection: 'column-reverse',
+        alignItems: 'center'
+    },
 })
