@@ -29,8 +29,8 @@ const Header = () => {
     const [isOnScrollPosition] = useScrollPosition({ scrollPos: 860 })
 
     return (
-        <StyledHeader blur={isOnScrollPosition}>
-            <Section main css={{ width: '100%' }}>
+        <StyledHeader blur={isOnScrollPosition} as="header">
+            <Section as="nav" css={{ width: '100%' }}>
                 <Row align="center">
                     <Menu links={SOCIAL_MEDIA_LIST} items={MENU_ITEMS} />
                 </Row>

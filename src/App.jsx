@@ -31,7 +31,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <Container className={styles.mainContent}>
+      <Container css={{ '@mdMax': { padding: 0 }}}>
         <MainBackground ref={backgroundRef} sticky={isOnScrollPosition} />
         <Presentation />
         <AboutMe />

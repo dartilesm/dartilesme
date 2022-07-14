@@ -8,26 +8,18 @@ const SectionStyled = styled('section', {
     overflow: 'hidden',
     boxSizing: 'border-box',
     margin: 'auto',
+    '@mdMax': {
+        padding: '0 $md'
+    },
     '@smMax': {
-        flexDirection: 'column'
+        flexDirection: 'column',
     },
     '@xsMax': {
         maxWidth: '100%',
-        width: 'calc(100vw - $12)'
+        width: 'calc(100vw - $12)',
     },
-    variants: {
-        main: {
-            true: {
-                maxWidth: '1200px',
-                padding: 0,
-                '@mdMax': {
-                    padding: '0 $md'
-                }
-            }
-        }
-    }
 })
 
-const Section = ({ children, main, css }) => <SectionStyled main={main} css={css}>{children}</SectionStyled>
+const Section = ({ children, main, css, as = "section" }) => <SectionStyled main={main} css={css} as={as}>{children}</SectionStyled>
 
 export default Section
