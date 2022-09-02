@@ -10,13 +10,12 @@ export const StyledHeader = styled(Grid, {
     top: '0',
     left: '0',
     zIndex: '1000',
-    backgroundColor: '$background',
+    backgroundColor: 'transparent',
+    transition: 'all ease .3s',
     variants: {
-        blur: {
+        solid: {
             true: {
-                backgroundColor: '#01012699',
-                backdropFilter: 'blur(5px)',
-                '-webkitBackdrop-filter': 'blur(10px)',
+                backgroundColor: '$background'
             }
         }
     }
@@ -52,7 +51,7 @@ export const StyledMobileMenuContainer = styled(Grid, {
     height: '100vh',
     top: '0',
     position: 'fixed',
-    backgroundColor: '#010126',
+    backgroundColor: '$background',
     right: '0',
     zIndex: '0',
     transition: 'all .5s ease',
@@ -95,18 +94,7 @@ export const StyledDesktopMenuItems = styled(StyledText, {
 })
 
 export const StyledMenuLinks = styled(Link, {
-    color: '#8193b2 !important',
-    '&:hover': {
-        color: '#efefef !important',
-        transform: 'scale(103%)'
-    },
-    variants: {
-        mobile: {
-            true: {
-                color: 'white !important'
-            }
-        }
-    }
+    color: '#efefef !important'
 })
 
 export const StyledResumeButton = styled(Button, {

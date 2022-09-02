@@ -15,7 +15,7 @@ import {
   StyledResumeButton
 } from "../styles";
 
-const MenuLinks = ({ links, mobile, onItemClick }) => {
+const MenuLinks = ({ links, onItemClick }) => {
     return <>
         {
             links.map(({ name, icon, href }) => (
@@ -29,7 +29,7 @@ const MenuLinks = ({ links, mobile, onItemClick }) => {
                 key={name}
                 onClick={onItemClick}
                 >
-                <StyledMenuLinks mobile={mobile} href={href} target='_blank' rel='noreferer'>
+                <StyledMenuLinks href={href} target='_blank' rel='noreferer'>
                     {icon}
                 </StyledMenuLinks>
                 </StyledDesktopMenuItems>
@@ -41,7 +41,7 @@ const MenuItems = ({ items, mobile, onItemClick }) => {
     return <>
         {
             items.map(({ name, href }) => <Text onClick={onItemClick} css={{ padding: "$sm", fontSize: '1.2rem' }}>
-            <StyledMenuLinks mobile={mobile} href={href}>
+            <StyledMenuLinks href={href}>
                 {name}
             </StyledMenuLinks>
         </Text>)

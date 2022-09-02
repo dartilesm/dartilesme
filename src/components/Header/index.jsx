@@ -26,10 +26,10 @@ const MENU_ITEMS = [
 ]
 
 const Header = () => {
-    const [isOnScrollPosition] = useScrollPosition({ scrollPos: 860 })
+    const [isOnScrollPosition] = useScrollPosition({ scrollPos: 200 })
 
     return (
-        <StyledHeader blur={isOnScrollPosition} as="header">
+        <StyledHeader solid={isOnScrollPosition} as="header">
             <Section as="nav" css={{ width: '100%' }}>
                 <Row align="center" css={{ maxHeight: 60 }}>
                     <Menu links={SOCIAL_MEDIA_LIST} items={MENU_ITEMS} />

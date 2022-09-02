@@ -6,7 +6,7 @@ export const sectionStyles = {
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'row',
-    top: '60px',
+    marginTop: '60px',
     '@smMax': {
         flexDirection: 'column-reverse',
 
