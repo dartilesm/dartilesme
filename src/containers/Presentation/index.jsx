@@ -1,4 +1,5 @@
 import { Button, Grid, Link } from "@nextui-org/react"
+import { useMemo } from "react"
 import { FiArrowRight } from "react-icons/fi"
 import MeImage from '../../assets/me.png'
 import { Section, Text, Title } from "../../components/UI"
@@ -6,7 +7,11 @@ import { SOCIAL_MEDIA_LIST } from "../../constants/social-medias"
 import { sectionStyles, StyledImage, StyledImageBackground, StyledImageContainer, StyledWelcomePresentation } from "./styles"
 
 
+const START_AS_FRONTEND_YEAR = 2017
+
 const Presentation = () => {
+    const knowledgeYears = useMemo(() => new Date().getFullYear() - START_AS_FRONTEND_YEAR, [])
+
     const contact = () => {
         window.open("mailto:diego@dartiles.dev?subject=Quisiera ponerme en contacto contigo - dartiles.me");
     }
@@ -33,7 +38,7 @@ const Presentation = () => {
                     }}
                 >Frontend Developer</Text>
                 <Text>
-                    Te saluda Diego Artiles, <b>soy desarrollador frontend en Coco.</b> Me considero una persona proactiva y siempre en busca de crear nuevas cosas 🚀.
+                    <strong>+{knowledgeYears} años trabajando como desarrollador Frontend 🤓.</strong> Me considero una persona proactiva y con muchas ganas de crear productos útiles para las personas 🚀.
                 </Text>
                 <Grid.Container css={{ display: 'flex', alignItems: 'center', gap: 20 }}>
                     <Grid>

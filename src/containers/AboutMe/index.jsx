@@ -9,16 +9,16 @@ const AboutMe = () => (
             <Row justify="center">
                 <Grid sm={12} direction="column">
                     <Text>
-                        Mi nombre es Diego Artiles, soy un <b>desarrollador especializado en el Frontend</b> con 5 años de experiencia. 👨‍💻
+                        Además de trabajar como Frontend Developer, tengo conocimientos en otras areas como <strong>Backend (Node.js - NestJS)</strong> y <strong>Mobile (Ionic - React Native)</strong>
                     </Text>
                     <Text>
-                        <b>Una de mis metas 🏅, es hacer servicios o aplicaciones útiles para las personas,</b> además de esto, disfruto y me encanta crear cosas nuevas. 😍
+                        <strong>Una de mis metas 🏅, es hacer servicios o aplicaciones útiles para las personas,</strong> además de esto, disfruto y me encanta crear cosas nuevas. 😍
                     </Text>
                     <Text>
-                        Me considero una persona muy proactiva con fuertes habilidades para identificar y resolver problemas. 🤩
+                        Cuento con fuertes habilidades para identificar y resolver problemas. 👨‍💻
                     </Text>
                     <Text>
-                        Además de la programación, <b>me llevo bien con la edición de videos y me gusta tomar buenas fotos 📷.</b> Por otro lado me encanta viajar ✈, conocer lugares nuevos 🌴 y diversas culturas 🙆‍♂️. 
+                        Además de la programación, <strong>me llevo bien con la edición de videos y me gusta tomar buenas fotos 📷.</strong> Por otro lado me encanta viajar ✈️, conocer lugares nuevos 🌴 y diversas culturas 🙆‍♂️. 
                     </Text>
                 </Grid>
             </Row>
