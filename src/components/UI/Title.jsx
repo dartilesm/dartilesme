@@ -20,7 +20,7 @@ const commomStyles = {
 }
 
 const TitleStyled = styled('h2', {
-    background: 'linear-gradient(0deg, #f7ff00 0%, #db36a4 100%)',
+    background: 'linear-gradient(-70deg, #db469f 0%, #2188ff 100%)',
     fontSize: 'calc($sm + $lg)',
     ...commomStyles,
     '@smMax': {

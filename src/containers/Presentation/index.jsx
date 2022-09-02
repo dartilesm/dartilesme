@@ -12,11 +12,26 @@ const Presentation = () => {
     }
 
     return (
-        <Section css={sectionStyles} main>
+        <Section css={sectionStyles}>
             <StyledWelcomePresentation>
-                <Title main>
-                    Bienvenido a mi portafolio
+                <Text css={{ paddingBottom: 0 }}>¡Hola 👋! Soy</Text>
+                <Title main css={{ paddingBottom: 10, margin: 0 }}>
+                    Diego Artiles
                 </Title>
+                <Text 
+                    css={{ 
+                        fontSize: "$md",
+                        padding: "$xs 0 $md 0",
+                        textTransform: "uppercase",
+                        fontWeight: 600,
+                        color: "white",
+                        letterSpacing: "2px",
+                        "@mdMax": {
+                            fontSize: "$sm",
+                            paddingBottom: "$sm"
+                        }
+                    }}
+                >Frontend Developer</Text>
                 <Text>
                     Te saluda Diego Artiles, <b>soy desarrollador frontend en Coco.</b> Me considero una persona proactiva y siempre en busca de crear nuevas cosas 🚀.
                 </Text>

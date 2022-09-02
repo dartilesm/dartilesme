@@ -31,7 +31,7 @@ const Header = () => {
     return (
         <StyledHeader blur={isOnScrollPosition} as="header">
             <Section as="nav" css={{ width: '100%' }}>
-                <Row align="center">
+                <Row align="center" css={{ maxHeight: 60 }}>
                     <Menu links={SOCIAL_MEDIA_LIST} items={MENU_ITEMS} />
                 </Row>
             </Section>

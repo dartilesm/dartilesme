@@ -9,7 +9,8 @@ const darkTheme = createTheme({
   type: 'dark',
   theme: {
     colors: {
-      textPrimary: '#8193b2'
+      background: '#001220',
+      textPrimary: '#d0d0d0'
     },
     fonts: {
       spaceGrotesk: "'Space Grotesk', sans-serif"

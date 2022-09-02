@@ -20,6 +20,6 @@ const SectionStyled = styled('section', {
     },
 })
 
-const Section = ({ children, main, css, as = "section" }) => <SectionStyled main={main} css={css} as={as}>{children}</SectionStyled>
+const Section = ({ children, css, as = "section" }) => <SectionStyled css={css} as={as}>{children}</SectionStyled>
 
 export default Section

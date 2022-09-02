@@ -3,17 +3,14 @@ import { Button, Col, Grid, Link, styled, StyledText } from "@nextui-org/react"
 export const StyledHeader = styled(Grid, {
     display: 'flex',
     alignItems: 'center',
-    height: '70px',
+    height: '60px',
     minHeight: '50px',
     width: '100vw',
     position: 'fixed',
     top: '0',
     left: '0',
     zIndex: '1000',
-    backgroundColor: '#010126',
-    boxShadow: '0px 2px 18px rgb(1, 1, 38)',
-	'-webkit-box-shadow': '0px 2px 18px rgb(1, 1, 38)',
-	'-moz-box-shadow': '0px 2px 18px rgb(1, 1, 38)',
+    backgroundColor: '$background',
     variants: {
         blur: {
             true: {
@@ -87,7 +84,7 @@ export const StyledDesktopMenuContainer = styled(Grid, {
     alignItems: 'center',
 })
 
-export const StyledDesktopMenuItems =  styled(StyledText, {
+export const StyledDesktopMenuItems = styled(StyledText, {
     cursor: 'pointer',
     padding: '$sm',
     borderRadius: '10px',

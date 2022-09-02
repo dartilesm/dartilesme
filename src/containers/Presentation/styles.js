@@ -1,19 +1,23 @@
 import { styled } from "@nextui-org/react"
 
 export const sectionStyles = {
-    height: 'calc(100vh - 100px)',
+    height: 'calc(100vh - 60px)',
     display: 'flex',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'row',
+    top: '60px',
     '@smMax': {
         flexDirection: 'column-reverse',
-        
+
     }
 }
 
 export const StyledWelcomePresentation = styled('div', {
-    maxWidth: '500px'
+    maxWidth: '500px',
+    "@mdMax": {
+        padding: "$xl 0"
+    }
 })
 
 export const StyledImageContainer = styled('div', {
@@ -26,7 +30,7 @@ export const StyledImageContainer = styled('div', {
 
 export const StyledImageBackground = styled('div', {
     borderRadius: '50%',
-    background: '#060609',
+    background: '#011829',
     aspectRatio: '1 / 1',
     width: '300px',
     height: '300px',
@@ -37,7 +41,7 @@ export const StyledImageBackground = styled('div', {
 })
 
 export const StyledImage = styled('img', {
-    clipPath: 'ellipse(42% 46%)',
+    clipPath: 'ellipse(44% 49.5% at 50% 50%)',
     width: '400px',
     height: '400px',
     zIndex: 1,
