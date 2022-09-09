@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { NextUIProvider, createTheme } from '@nextui-org/react';
+import { HashRouterProvider } from './context/hashRouter';
 
 const darkTheme = createTheme({
   type: 'dark',
@@ -26,7 +27,9 @@ const darkTheme = createTheme({
 ReactDOM.render(
   <React.StrictMode>
     <NextUIProvider theme={darkTheme}>
-      <App />
+      <HashRouterProvider>
+        <App />
+      </HashRouterProvider>
     </NextUIProvider>
   </React.StrictMode>,
   document.getElementById('root')

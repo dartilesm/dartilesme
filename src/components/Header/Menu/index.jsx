@@ -1,54 +1,15 @@
-import { Link, Navbar, Button } from "@nextui-org/react";
-import { useState } from "react";
-import { Text } from "../../UI";
-import Logo from '../../../assets/logo.png';
-import {
-  StyledDesktopMenuItems, StyledLogoContainer, StyledMenuLinks
-} from "../styles";
+import { Button, Link, Navbar, Spacer } from "@nextui-org/react";
+import { useContext } from "react";
 import { FiExternalLink } from "react-icons/fi";
-import useMediaQuery from "../../../hooks/useMediaQuery";
-import { Spacer } from "@nextui-org/react";
-
-// const MenuLinks = ({ links, onItemClick }) => {
-//     return <>
-//         {
-//             links.map(({ name, icon, href }) => (
-//                 <StyledDesktopMenuItems
-//                 size='1.2rem'
-//                 css={{
-//                     display: "flex",
-//                     alignItems: "center",
-//                     padding: "$sm",
-//                 }}
-//                 key={name}
-//                 onClick={onItemClick}
-//                 >
-//                 <StyledMenuLinks href={href} target='_blank' rel='noreferer'>
-//                     {icon}
-//                 </StyledMenuLinks>
-//                 </StyledDesktopMenuItems>
-//             ))
-//         }
-//     </>
-// }
-// const MenuItems = ({ items, mobile, onItemClick }) => {
-//     return <>
-//         {
-//             items.map(({ name, href }) => <Text onClick={onItemClick} css={{ padding: "$sm", fontSize: '1.2rem' }}>
-//             <StyledMenuLinks href={href}>
-//                 {name}
-//             </StyledMenuLinks>
-//         </Text>)
-//         }
-//     </>
-// }
-
+import Logo from '../../../assets/logo.png';
+import { HashRouterContext } from "../../../context/hashRouter";
+import { Text } from "../../UI";
+import { StyledLogoContainer } from "../styles";
 
 const Menu = ({ links, items }) => {
-  const isSmallDevice = useMediaQuery("(max-width: 960px)")
-
+    const {hashLocation} = useContext(HashRouterContext)
     return (
-          <Navbar shouldHideOnScroll={!isSmallDevice} disableScrollHandler variant='sticky' maxWidth="fluid" css={{
+          <Navbar disableScrollHandler variant='sticky' maxWidth="fluid" css={{
               margin: 'auto', 
               background: '$backgroundAlpha',
               backdropFilter: 'saturate(180%) blur(10px)',
@@ -81,7 +42,10 @@ const Menu = ({ links, items }) => {
             <Navbar.Content enableCursorHighlight hideIn='sm' variant='highlight-rounded'>
               {
                 items.map((item, index) => (
-                  <Navbar.Link href={item.href}>{item.name}</Navbar.Link>
+                  <Navbar.Link
+                    isActive={hashLocation === item.href.replace('#', '')}
+                    href={item.href}
+                  >{item.name}</Navbar.Link>
                 ))
               }
             </Navbar.Content>

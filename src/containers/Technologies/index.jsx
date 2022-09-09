@@ -1,6 +1,7 @@
 import { Grid, Spacer } from "@nextui-org/react"
 import { SiAngular, SiCypress, SiIonic, SiJest, SiNestjs, SiReact, SiRollupdotjs, SiSvelte, SiTestinglibrary, SiVite, SiVuedotjs, SiWebpack } from 'react-icons/si'
 import { Section, Subtitle, Text, Title } from "../../components/UI"
+import useUpdateHashOnIntersect from "../../hooks/useUpdateHashOnIntersect"
 import Skills from "./Skills"
 import { StyledSkills, StyledSkillsContainer } from "./styles"
 
@@ -63,46 +64,50 @@ const bundlerList = [
 
 
 
-const Technologies = () => (
-    <>
-        <Spacer id="technologies"/>
-        <Section>
-            <Title>
-                Tecnologías
-            </Title>
-            <Text>
-                De manera resumida les dejo algunas de las tecnologías o herramientas con las que he trabajado.
-            </Text>
-            <Spacer y={2} />
-            <StyledSkillsContainer sm={12} justify="center" wrap="wrap">
-                <StyledSkills sm={12} direction="column">
-                    <Subtitle>
-                        Frameworks/librerías
-                    </Subtitle>
-                    <Grid.Container gap={2} wrap="wrap">
-                        <Skills list={frameworksList} />
-                    </Grid.Container>
-                </StyledSkills>
-                <StyledSkills sm={12} direction="column">
-                    <Subtitle>
-                        Testing
-                    </Subtitle>
-                    <Grid.Container gap={2} wrap="wrap">
-                        <Skills list={testingList} />
-                    </Grid.Container>
-                </StyledSkills>
-                <StyledSkills sm={12} direction="column">
-                    <Subtitle>
-                        Empaquetadores Webs
-                    </Subtitle>
-                    <Grid.Container gap={2} wrap="wrap">
-                        <Skills list={bundlerList} />
-                    </Grid.Container>
-                </StyledSkills>
-            </StyledSkillsContainer>
-            <Spacer y={4} />
-        </Section>
-    </>
-)
+const Technologies = () => {
+    const [elementRef] = useUpdateHashOnIntersect({ hash: 'technologies'})
+
+    return (
+        <>
+            <Spacer id="technologies"/>
+            <Section ref={elementRef}>
+                <Title>
+                    Tecnologías
+                </Title>
+                <Text>
+                    De manera resumida les dejo algunas de las tecnologías o herramientas con las que he trabajado.
+                </Text>
+                <Spacer y={2} />
+                <StyledSkillsContainer sm={12} justify="center" wrap="wrap">
+                    <StyledSkills sm={12} direction="column">
+                        <Subtitle>
+                            Frameworks/librerías
+                        </Subtitle>
+                        <Grid.Container gap={2} wrap="wrap">
+                            <Skills list={frameworksList} />
+                        </Grid.Container>
+                    </StyledSkills>
+                    <StyledSkills sm={12} direction="column">
+                        <Subtitle>
+                            Testing
+                        </Subtitle>
+                        <Grid.Container gap={2} wrap="wrap">
+                            <Skills list={testingList} />
+                        </Grid.Container>
+                    </StyledSkills>
+                    <StyledSkills sm={12} direction="column">
+                        <Subtitle>
+                            Empaquetadores Webs
+                        </Subtitle>
+                        <Grid.Container gap={2} wrap="wrap">
+                            <Skills list={bundlerList} />
+                        </Grid.Container>
+                    </StyledSkills>
+                </StyledSkillsContainer>
+                <Spacer y={4} />
+            </Section>
+        </>
+    )
+}
 
 export default Technologies

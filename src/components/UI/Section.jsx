@@ -1,4 +1,5 @@
 import { styled } from '@nextui-org/react'
+import { forwardRef } from 'react'
 
 const SectionStyled = styled('section', {
     display: 'flex',
@@ -20,6 +21,6 @@ const SectionStyled = styled('section', {
     },
 })
 
-const Section = ({ children, css, as = "section" }) => <SectionStyled css={css} as={as}>{children}</SectionStyled>
+const Section = forwardRef(({ children, css, as = "section" }, ref) => <SectionStyled css={css} as={as} ref={ref}>{children}</SectionStyled>)
 
 export default Section

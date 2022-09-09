@@ -1,4 +1,5 @@
 import { styled } from "@nextui-org/react";
+import { forwardRef } from "react";
 import Divider from "./Divider";
 
 
@@ -49,9 +50,9 @@ const MainTitleStyled = styled('h1', {
     },
 })
 
-const Title = ({ children, main, css }) => <>
+const Title = forwardRef(({ children, main, css }, ref) => <>
     { !main && <Divider /> }
-    { !main ? <TitleStyled css={css}>{children}</TitleStyled> : <MainTitleStyled css={css}>{children}</MainTitleStyled> }
-</>
+    { !main ? <TitleStyled css={css} ref={ref}>{children}</TitleStyled> : <MainTitleStyled css={css} ref={ref}>{children}</MainTitleStyled> }
+</>)
 
 export default Title
