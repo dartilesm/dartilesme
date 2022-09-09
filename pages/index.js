@@ -55,7 +55,6 @@ export default function Home() {
                 <link rel="apple-touch-icon" href="/logo2.png" />
 
                 <link rel="manifest" href="/manifest.json" />
-                <script defer data-domain="dartiles.me" src="https://plausible.io/js/plausible.js"></script>
             </Head>
 
             <main>

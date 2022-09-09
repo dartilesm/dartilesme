@@ -6,6 +6,7 @@ specifiers:
   '@testing-library/react': ^11.1.0
   '@testing-library/user-event': ^12.1.10
   next: 12.1.0
+  next-plausible: ^3.5.0
   next-themes: ^0.2.1
   react: 17.0.2
   react-dom: 17.0.2
@@ -14,6 +15,7 @@ specifiers:
 dependencies:
   '@nextui-org/react': 1.0.0-beta.10_sfoxds7t5ydpegc3knd667wn6m
   next: 12.1.0_sfoxds7t5ydpegc3knd667wn6m
+  next-plausible: 3.5.0_zktdhiadde2q3pnefglgcp7cnq
   next-themes: 0.2.1_zktdhiadde2q3pnefglgcp7cnq
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
@@ -1382,6 +1384,18 @@ packages:
     resolution: {integrity: sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
+    dev: false
+
+  /next-plausible/3.5.0_zktdhiadde2q3pnefglgcp7cnq:
+    resolution: {integrity: sha512-mN4IXHwKA0/OlEhjCzpC1qrPbZIpZ6GTPqKyd8PdL+SW400aXKvkHD4oEAttokOYg0gieEIoK0Uj4He6UeaE2Q==}
+    peerDependencies:
+      next: ^11.1.0 || ^12.0.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      next: 12.1.0_sfoxds7t5ydpegc3knd667wn6m
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
     dev: false
 
   /next-themes/0.2.1_zktdhiadde2q3pnefglgcp7cnq:
