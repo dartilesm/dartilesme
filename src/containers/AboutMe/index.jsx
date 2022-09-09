@@ -1,6 +1,8 @@
 import { Grid, Row, Spacer } from "@nextui-org/react";
+import RecommendMe from "../../components/RecommendMe/RecommendMe";
 import { Section, Text, Title } from "../../components/UI";
 import useUpdateHashOnIntersect from "../../hooks/useUpdateHashOnIntersect";
+import { GradientBackground } from "./styles";
 
 const AboutMe = () => {
     const [elementRef] = useUpdateHashOnIntersect({ hash: 'about-me'})
@@ -26,6 +28,10 @@ const AboutMe = () => {
                         </Text>
                     </Grid>
                 </Row>
+                <Spacer y={2} />
+                <RecommendMe css={{ margin: "auto" }}/>
+                <GradientBackground css={{ height: 150, width: "25%", position: 'absolute', bottom: 160, left: "50%", transform: "translateX(-50%)", zIndex: 1 }}/>
+                <Spacer y={3} />
             </Section>
         </>
     )
