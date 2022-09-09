@@ -16,11 +16,11 @@ const SubtitleStyled = styled('h3', {
     '-moz-box-decoration-break': 'clone',
     padding: '0 0 $12',
     '@smMax': {
-        fontSize: '$md',
+        fontSize: '$2xl',
         padding: '0 0 $10'
     },
     '@xsMax': {
-        fontSize: 'calc($lg - $xs)',
+        fontSize: 'calc($4xl - $sm)',
     }
 })
 
