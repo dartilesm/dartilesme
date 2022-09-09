@@ -42,7 +42,7 @@ const Presentation = () => {
                 </Text>
                 <Grid.Container css={{ display: 'flex', alignItems: 'center', gap: 20 }}>
                     <Grid>
-                        <Button onClick={contact} size="md" iconRight={<FiArrowRight />}>
+                        <Button onClick={contact} size="md" iconRight={<FiArrowRight />} rounded>
                             Contáctame
                         </Button>
                     </Grid>
