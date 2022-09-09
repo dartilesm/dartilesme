@@ -1,7 +1,13 @@
 import Head from 'next/head';
 import App from '../components/App';
 import { NextUIProvider, createTheme } from '@nextui-org/react';
+import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import { HashRouterProvider } from '../context/hashRouter';
+
+const lightTheme = createTheme({
+    type: 'light',
+    theme: {}
+})
 
 const darkTheme = createTheme({
     type: 'dark',
@@ -53,11 +59,20 @@ export default function Home() {
             </Head>
 
             <main>
-                <NextUIProvider theme={darkTheme}>
-                    <HashRouterProvider>
-                        <App />
-                    </HashRouterProvider>
-                </NextUIProvider>
+                <NextThemesProvider
+                    defaultTheme="dark"
+                    attribute="class"
+                    value={{
+                        light: lightTheme.className,
+                        dark: darkTheme.className
+                    }}
+                >
+                    <NextUIProvider theme={darkTheme}>
+                        <HashRouterProvider>
+                            <App />
+                        </HashRouterProvider>
+                    </NextUIProvider>
+                </NextThemesProvider>
             </main>
         </>
     );
