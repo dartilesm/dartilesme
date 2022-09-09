@@ -1,7 +1,7 @@
 import { Button, Grid, Link } from "@nextui-org/react"
 import { useMemo } from "react"
 import { FiArrowRight } from "react-icons/fi"
-import MeImage from '../../public/assets/me.png'
+import MeImage from '../../public/assets/me.webp'
 import { Section, Text, Title } from "../../components/UI"
 import { SOCIAL_MEDIA_LIST } from "../../constants/social-medias"
 import { sectionStyles, StyledImage, StyledImageBackground, StyledImageContainer, StyledWelcomePresentation } from "./styles"

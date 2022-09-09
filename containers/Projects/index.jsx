@@ -11,7 +11,7 @@ const listOfProjects = [
         urlProject: 'https://dartiles.dev',
         urlCode: 'https://github.com/dartilesm/dartiles.dev',
         technologies: 'Svelte',
-        image: '/dartiles.dev.jpg'
+        image: '/dartiles.dev.webp'
     },
     {
         id: 2,
@@ -20,7 +20,7 @@ const listOfProjects = [
         urlProject: 'https://www.npmjs.com/package/vue-stitches',
         urlCode: 'https://github.com/dartilesm/vue-stitches',
         technologies: 'Vue, Javascript',
-        image: '/vue-stitches.png'
+        image: '/vue-stitches.webp'
     }
 ]
 

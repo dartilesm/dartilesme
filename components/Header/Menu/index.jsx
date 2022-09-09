@@ -36,7 +36,7 @@ const Menu = ({ links, items }) => {
             <Navbar.Brand css={{ gap: '$5' }}>
               <Navbar.Toggle aria-label='toggle navigation' showIn='sm' />
               <StyledLogoContainer css={{ margin: '0'}}>
-                <Image src="/assets/logo.png" alt='logo' width={40} height={40} />
+                <Image src="/assets/logo.webp" alt='logo' width={40} height={40} />
               </StyledLogoContainer>              
             </Navbar.Brand>
             <Navbar.Content enableCursorHighlight hideIn='sm' variant='highlight-rounded'>

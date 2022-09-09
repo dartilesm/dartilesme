@@ -22,7 +22,7 @@ const darkTheme = createTheme({
 
 export default function Home() {
     return (
-        <div>
+        <>
             <Head>
                 <title>Diego Artiles - Frontend Developer</title>
                 <meta name="title" content="Diego Artiles - Frontend Developer" />
@@ -59,6 +59,6 @@ export default function Home() {
                     </HashRouterProvider>
                 </NextUIProvider>
             </main>
-        </div>
+        </>
     );
 }
