@@ -1,7 +1,7 @@
 import { Button, Link, Navbar, Spacer } from "@nextui-org/react";
 import { useContext } from "react";
 import { FiExternalLink } from "react-icons/fi";
-import Logo from '../../../assets/logo.png';
+import Image from 'next/image'
 import { HashRouterContext } from "../../../context/hashRouter";
 import { Text } from "../../UI";
 import { StyledLogoContainer } from "../styles";
@@ -36,15 +36,16 @@ const Menu = ({ links, items }) => {
             <Navbar.Brand css={{ gap: '$5' }}>
               <Navbar.Toggle aria-label='toggle navigation' showIn='sm' />
               <StyledLogoContainer css={{ margin: '0'}}>
-                <img src={Logo} alt='logo' width={40} />
+                <Image src="/assets/logo.png" alt='logo' width={40} height={40} />
               </StyledLogoContainer>              
             </Navbar.Brand>
             <Navbar.Content enableCursorHighlight hideIn='sm' variant='highlight-rounded'>
               {
-                items.map((item, index) => (
+                items.map((item) => (
                   <Navbar.Link
                     isActive={hashLocation === item.href.replace('#', '')}
                     href={item.href}
+                    key={item.name}
                   >{item.name}</Navbar.Link>
                 ))
               }

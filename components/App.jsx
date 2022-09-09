@@ -1,12 +1,12 @@
 import { Container, globalCss } from '@nextui-org/react';
-import Header from './components/Header';
-import Vector from './components/Vector/Vector';
-import AboutMe from './containers/AboutMe';
-import MainBackground from './containers/MainBackground';
-import MyHistory from './containers/MyHistory';
-import Presentation from './containers/Presentation';
-import Projects from './containers/Projects';
-import Technologies from './containers/Technologies';
+import Header from './Header';
+import Vector from './Vector/Vector';
+import AboutMe from '../containers/AboutMe';
+import MainBackground from '../containers/MainBackground';
+import MyHistory from '../containers/MyHistory';
+import Presentation from '../containers/Presentation';
+import Projects from '../containers/Projects';
+import Technologies from '../containers/Technologies';
 
 const globalStyles = globalCss({
   '*': {

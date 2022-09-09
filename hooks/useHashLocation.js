@@ -1,15 +1,14 @@
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router"
 
-function currentLocation() {
-    return window.location.hash;
-};
 
 function useHashLocation() {
-    const [hashLocation, setHashLocation] = useState(currentLocation());
+    const router = useRouter()
+    const [hashLocation, setHashLocation] = useState(router.asPath.replace('#', ''));
 
     useEffect(() => {
         // this function is called whenever the hash changes
-        const handler = () => setHashLocation(currentLocation());
+        const handler = () => setHashLocation(router.asPath.replace('#', ''));
 
         // subscribe to hash changes
         window.addEventListener("hashchange", handler);

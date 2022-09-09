@@ -1,4 +1,5 @@
 import { styled } from "@nextui-org/react"
+import Image from "next/image"
 
 export const sectionStyles = {
     height: 'calc(100vh - 60px)',
@@ -40,7 +41,7 @@ export const StyledImageBackground = styled('div', {
     transform: 'translateX(-50%)',
 })
 
-export const StyledImage = styled('img', {
+export const StyledImage = styled(Image, {
     clipPath: 'ellipse(44% 49.5% at 50% 50%)',
     width: '400px',
     height: '400px',
