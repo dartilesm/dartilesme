@@ -3,13 +3,13 @@ import { styled, StyledText as NextUIText } from "@nextui-org/react";
 const StyledText = styled(NextUIText, {
   fontFamily: 'inherit',
   color: "$textPrimary",
-  fontSize: "calc($tiny + $xs)",
+  fontSize: "calc($xs + $sm)",
   fontWeight: "$normal",
   letterSpacing: "$normal",
   paddingBottom: "$10",
   margin: 0,
   "@mdMax": {
-    fontSize: "calc($lg - $base)",
+    fontSize: "$xl",
     paddingBottom: "$10",
   },
   "@smMax": {

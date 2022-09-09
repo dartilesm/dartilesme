@@ -21,14 +21,14 @@ const commomStyles = {
 
 const TitleStyled = styled('h2', {
     background: 'linear-gradient(-70deg, #db469f 0%, #2188ff 100%)',
-    fontSize: 'calc($sm + $lg)',
+    fontSize: 'calc($xl + $4xl)',
     ...commomStyles,
     '@smMax': {
         fontSize: '$xl',
         padding: '0 0 $sm'
     },
     '@xsMax': {
-        fontSize: 'calc($sm + $tiny)',
+        fontSize: 'calc($md + $md)',
         padding: '0 0 $xs'
     },
 })
@@ -36,7 +36,7 @@ const TitleStyled = styled('h2', {
 
 const MainTitleStyled = styled('h1', {
     background: 'linear-gradient(-70deg, #3bf0e4 0%, #bca1f7 100%)',
-    fontSize: 'calc($xl + $base)',
+    fontSize: 'calc($md + $5xl)',
     ...commomStyles,
     '@smMax': {
         fontSize: 'calc($sm + $lg)',
