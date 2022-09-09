@@ -3,22 +3,17 @@ import { Button, Col, Grid, Link, styled, StyledText } from "@nextui-org/react"
 export const StyledHeader = styled(Grid, {
     display: 'flex',
     alignItems: 'center',
-    height: '60px',
+    height: 'auto',
     minHeight: '50px',
-    width: '100vw',
+    width: 'calc(100vw - (100vw - 100%))',
     position: 'fixed',
     top: '0',
     left: '0',
     zIndex: '1000',
-    backgroundColor: 'transparent',
     transition: 'all ease .3s',
-    variants: {
-        solid: {
-            true: {
-                backgroundColor: '$background'
-            }
-        }
-    }
+    overflow: 'visible',
+    background: 'transparent',
+    boxSizing: 'border-box'
 })
 
 export const StyledLogoContainer = styled(Col, {

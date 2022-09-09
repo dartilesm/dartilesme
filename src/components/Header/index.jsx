@@ -1,42 +1,33 @@
-import { Row } from "@nextui-org/react"
-import { SOCIAL_MEDIA_LIST } from "../../constants/social-medias"
-import useScrollPosition from "../../hooks/useScrollPosition"
-import { Section } from '../UI'
-import Menu from "./Menu"
-import { StyledHeader } from './styles'
-
+import { SOCIAL_MEDIA_LIST } from "../../constants/social-medias";
+import Menu from "./Menu";
+import { StyledHeader } from "./styles";
 
 const MENU_ITEMS = [
-    {
-        name: 'Sobre mi',
-        href: '#about-me'
-    },
-    {
-        name: 'Proyectos',
-        href: '#projects'
-    },
-    {
-        name: 'Historia',
-        href: '#history'
-    },
-    {
-        name: 'Tecnologías',
-        href: '#technologies'
-    }
-]
+  {
+    name: "Sobre mi",
+    href: "#about-me",
+  },
+  {
+    name: "Proyectos",
+    href: "#projects",
+  },
+  {
+    name: "Historia",
+    href: "#history",
+  },
+  {
+    name: "Tecnologías",
+    href: "#technologies",
+  },
+];
 
 const Header = () => {
-    const [isOnScrollPosition] = useScrollPosition({ scrollPos: 200 })
 
-    return (
-        <StyledHeader solid={isOnScrollPosition} as="header">
-            <Section as="nav" css={{ width: '100%' }}>
-                <Row align="center" css={{ maxHeight: 60 }}>
-                    <Menu links={SOCIAL_MEDIA_LIST} items={MENU_ITEMS} />
-                </Row>
-            </Section>
-        </StyledHeader>
-    )
-}
+  return (
+    <StyledHeader as='header'>
+            <Menu links={SOCIAL_MEDIA_LIST} items={MENU_ITEMS} />
+    </StyledHeader>
+  );
+};
 
-export default Header
+export default Header;
