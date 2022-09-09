@@ -20,7 +20,7 @@ function RecommendMe({ css = {} }) {
             <Text h5 css={{ textAlign: "center" }}>¿Te gusta mi trabajo? ¿Has trabajado conmigo?</Text>
         </Card.Body>
         <Card.Footer css={{ display: "flex", justifyContent: "center" }}>
-            <Link href="https://www.linkedin.com/in/dartiles/edit/forms/recommendation/write/" target="_blank">
+            <Link href="https://www.linkedin.com/in/dartiles/edit/forms/recommendation/write/?profileUrn=urn%3Ali%3Afsd_profile%3AACoAACB74ZsB6OQgEkROYEY4GUJCg7WdWYrroBs" target="_blank">
                 <Button color="primary" auto iconRight={<FiMessageSquare color="inherit" />}>
                     Dejame una recomendación
                 </Button>
