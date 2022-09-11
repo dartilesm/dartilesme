@@ -25,7 +25,7 @@ const TitleStyled = styled('h2', {
     fontSize: 'calc($xl + $4xl)',
     ...commomStyles,
     '@smMax': {
-        fontSize: '$xl',
+        fontSize: '$5xl',
         padding: '0 0 $sm'
     },
     '@xsMax': {
