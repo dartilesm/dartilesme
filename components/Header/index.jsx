@@ -4,19 +4,19 @@ import { StyledHeader } from "./styles";
 
 const MENU_ITEMS = [
   {
-    name: "Sobre mi",
+    name: "aboutMe",
     href: "#about-me",
   },
   {
-    name: "Proyectos",
+    name: "projects",
     href: "#projects",
   },
   {
-    name: "Historia",
+    name: "history",
     href: "#history",
   },
   {
-    name: "Tecnologías",
+    name: "technologies",
     href: "#technologies",
   },
 ];

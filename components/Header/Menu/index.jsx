@@ -1,12 +1,14 @@
 import { Button, Link, Navbar, Spacer } from "@nextui-org/react";
 import { useContext } from "react";
 import { FiExternalLink } from "react-icons/fi";
+import { useTranslations } from 'next-intl';
 import Image from 'next/image'
 import { HashRouterContext } from "../../../context/hashRouter";
 import { Text } from "../../UI";
 import { StyledLogoContainer } from "../styles";
 
 const Menu = ({ links, items }) => {
+    const t = useTranslations('menu')
     const {hashLocation} = useContext(HashRouterContext)
     return (
           <Navbar disableScrollHandler variant='sticky' maxWidth="fluid" css={{
@@ -46,7 +48,7 @@ const Menu = ({ links, items }) => {
                     isActive={hashLocation === item.href.replace('#', '')}
                     href={item.href}
                     key={item.name}
-                  >{item.name}</Navbar.Link>
+                  >{t(item.name)}</Navbar.Link>
                 ))
               }
             </Navbar.Content>

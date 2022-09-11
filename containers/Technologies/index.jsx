@@ -1,4 +1,5 @@
 import { Grid, Spacer } from "@nextui-org/react"
+import { useTranslations } from 'next-intl';
 import { SiAngular, SiCypress, SiIonic, SiJest, SiNestjs, SiReact, SiRollupdotjs, SiSvelte, SiTestinglibrary, SiVite, SiVuedotjs, SiWebpack } from 'react-icons/si'
 import { Section, Subtitle, Text, Title } from "../../components/UI"
 import useUpdateHashOnIntersect from "../../hooks/useUpdateHashOnIntersect"
@@ -62,9 +63,8 @@ const bundlerList = [
     }
 ]
 
-
-
 const Technologies = () => {
+    const t = useTranslations('technologies')
     const [elementRef] = useUpdateHashOnIntersect({ hash: 'technologies'})
 
     return (
@@ -72,16 +72,16 @@ const Technologies = () => {
             <Spacer id="technologies"/>
             <Section ref={elementRef}>
                 <Title>
-                    Tecnologías
+                    { t('title') }
                 </Title>
                 <Text>
-                    De manera resumida les dejo algunas de las tecnologías o herramientas con las que he trabajado.
+                    { t('description') }
                 </Text>
                 <Spacer y={2} />
                 <StyledSkillsContainer sm={12} justify="center" wrap="wrap">
                     <StyledSkills sm={12} direction="column">
                         <Subtitle>
-                            Frameworks/librerías
+                            { t('frameworks') }
                         </Subtitle>
                         <Grid.Container gap={2} wrap="wrap">
                             <Skills list={frameworksList} />
@@ -89,7 +89,7 @@ const Technologies = () => {
                     </StyledSkills>
                     <StyledSkills sm={12} direction="column">
                         <Subtitle>
-                            Testing
+                            { t('testing') }
                         </Subtitle>
                         <Grid.Container gap={2} wrap="wrap">
                             <Skills list={testingList} />
@@ -97,7 +97,7 @@ const Technologies = () => {
                     </StyledSkills>
                     <StyledSkills sm={12} direction="column">
                         <Subtitle>
-                            Empaquetadores Webs
+                            { t('bundles') }
                         </Subtitle>
                         <Grid.Container gap={2} wrap="wrap">
                             <Skills list={bundlerList} />

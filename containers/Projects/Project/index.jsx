@@ -1,11 +1,10 @@
-import { Button } from "@nextui-org/react"
+import { Button, Link } from "@nextui-org/react"
 import { FiExternalLink, FiGithub } from 'react-icons/fi'
+import { useTranslations } from 'next-intl';
 import { ProjectButtonContainerStyled, ProjectImage, ProjectInfoContainerStyled, ProjectInfoStyled, ProjectLinkStyled, StyledProjectContainer, StyledProjectInfo } from "./styles"
 
 const Project = ({ project, reverse }) => {
-    const openUrl = (url) => {
-        window.open(url, '_blank')
-    }
+    const t = useTranslations('projects')
 
     return <>
         <StyledProjectContainer reverse={reverse}>
@@ -13,12 +12,14 @@ const Project = ({ project, reverse }) => {
                 <ProjectInfoStyled>
                     <StyledProjectInfo>{project.name}</StyledProjectInfo>
                     <StyledProjectInfo type="technology">{project.technologies}</StyledProjectInfo>
-                    <StyledProjectInfo type="description">{project.description}</StyledProjectInfo>
+                    <StyledProjectInfo type="description">{t(`projectDescriptions.${project.description}`)}</StyledProjectInfo>
                     <ProjectButtonContainerStyled>
                         {
-                            project.urlProject && <Button onClick={() => openUrl(project.urlProject)} rounded color="primary" iconRight={<FiExternalLink />}> 
-                                Ir al sitio
-                            </Button>
+                            project.urlProject && <Link href={project.urlProject} target="_blank">
+                                <Button rounded color="primary" iconRight={<FiExternalLink />} > 
+                                    {t('ctaText')}
+                                </Button>
+                            </Link>
                         }
                         { 
                             project.urlCode && <ProjectLinkStyled href={project.urlCode} target="_blank" rel="noreferrer"> 
