@@ -29,7 +29,7 @@ const AboutMe = () => {
                     </Grid>
                 </Row>
                 <Spacer y={2} />
-                <RecommendMe css={{ margin: "auto" }}/>
+                <RecommendMe css={{ margin: "auto", zIndex: 2 }}/>
                 <GradientBackground css={{ height: 150, width: "25%", position: 'absolute', bottom: 160, left: "50%", transform: "translateX(-50%)", zIndex: 1 }}/>
                 <Spacer y={3} />
             </Section>
