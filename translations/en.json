@@ -1,0 +1,10 @@
+{
+    "presentation": {
+        "greeting": "¡Hola 👋! Soy",
+        "description": {
+            "part1": "+{knowledgeYears} años trabajando como desarrollador Frontend 🤓.",
+            "part2": "Me considero una persona proactiva y con muchas ganas de crear productos útiles para las personas 🚀."
+        },
+        "contactText": "Contáctame"
+    }
+}
