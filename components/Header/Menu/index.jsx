@@ -83,13 +83,13 @@ const Menu = ({ links, items }) => {
                     }}
                     href={item.href}
                   >
-                    {item.name}
+                    {t(item.name)}
                   </Link>
                 </Navbar.CollapseItem>
               ))}
               </li>
               <li>
-                <Text>Descubre mis redes sociales</Text>
+                <Text>{t('socialText')}</Text>
                 {links.map((item) => (
                   <Navbar.CollapseItem disableAnimation={false} as="span" key={item.href}>
                     <Link

@@ -18,10 +18,10 @@ const MyHistory = () => {
                     {t('title')}
                 </Title>
                 <Collapse.Group splitted css={collapseGroupStyle}>
-                    <Collapse css={collapseStyle} title="Comienzos" subtitle="Descubre como inicié en el mundo del desarrollo">
+                    <Collapse css={collapseStyle} title={t('beginnings.title')} subtitle={t('beginnings.description')}>
                         <Beginnings />
                     </Collapse>
-                    <Collapse css={collapseStyle} title="Aprendizaje" subtitle="¿Qué he aprendido estos últimos años?">
+                    <Collapse css={collapseStyle} title={t('learning.title')} subtitle={t('learning.description')}>
                         <Learning />
                     </Collapse>
                 </Collapse.Group>

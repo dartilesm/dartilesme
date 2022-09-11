@@ -1,7 +1,66 @@
 {
+    "menu": {
+        "aboutMe": "About me",
+        "projects": "Projects",
+        "history": "History",
+        "technologies": "Technologies",
+        "buttonText": "Resume",
+        "socialText": "Find out my social media"
+    },
     "presentation": {
-        "greeting": "Hi 👋! I am",
+        "greeting": "Hi 👋! I'm",
         "description": "<strong>+{knowledgeYears} years working as a Frontend Developer 🤓.</strong> I consider myself as a proactive person with a lot of desire to create useful products for people 🚀.",
         "contactText": "Contact me"
+    },
+    "aboutMe": {
+        "title": "About me",
+        "description": {
+            "paragraph1": "Besides programming as a Frontend Developer, I have knowledge in other areas such as <strong>Backend (Node.js - NestJS)</strong> and <strong>Mobile (Ionic - React Native)</strong>",
+            "paragraph2": "<strong>One of my goals 🏅 is making services or apps useful for people,</strong> besides this, I enjoy and like making new stuffs 😍",
+            "paragraph3": "I have strong skills to identify and fix problems. 👨‍💻",
+            "paragraph4": "On the other hand, <strong>I get along well with video editing and I like taking nice pictures 📷,</strong> traveling ✈️, getting to know new places 🌴 and different kinds of cultures 🙆‍♂️."
+        }
+    },
+    "recommendMe": {
+        "title": "Recommend me",
+        "description": "Do you like my work? Have you worked with me?",
+        "ctaText": "Let me a recommendation"
+    },
+    "projects": {
+        "title": "Featured projecs",
+        "projectDescriptions": {
+            "dartilesDev": "A space currently under development, at the beginning it was a personal blog but today it is expected to be used by more people to share knowledge and information from the IT world.",
+            "vueStitches": "It is a small package that helps to better use Stitches in Vue projects. Stitches (at the time I'm writing this) only has an adapted version of React, so I'm using the core version to make this package."
+        },
+        "ctaText": "Go to the site"
+    },
+    "history": {
+        "title": "History",
+        "beginnings": {
+            "title": "Beginnings",
+            "description": "Find out how I started out in the world of development.",
+            "paragraph1": "Before I started in this world of web development, I used to make videos on youtube about video games, in those moments I learned to edit videos, to achieve it, I used tools like <highlight>Adobe After Effects, Sony Vegas Pro, Camtasia, and so on.</highlight> To make the thumbnail of my videos I learned to use <highlight>Adobe Photoshop</highlight>.",
+            "paragraph2": "You are probably wondering, how I switched from the YouTube world to development, well, <highlight>I am a non-conformist person, I always want to learn or make new things,</highlight> that's why I wished to make my own website to my channel to publish my own content, have control of it and better yet, add my YouTube videos automatically.",
+            "paragraph3": "Although that was my initial idea, I didn't know how to start doing it, so I began to look for videos on YouTube of \"how to create your own website\" and, finally I found a website that created other websites called <link>Wix</link>. I was very excited because I was creating something of my own with my own hands, It was basically like<highlight>\"my own little personal brand\".</highlight> As time went on, I felt the need to add more and more things, to the point where Wix wouldn't let me do what I wanted to do and I couldn't find videos to help me with that either.",
+            "paragraph4": "So, I kept searching on the Internet how to do what I wanted, I realized that it was possible to do it but with code and, unfortunately, Wix didn't give me the freedom to use code on its site. However, <highlight>I never gave up</highlight> and started looking for a solution, this solution was to make the page again with HTML and CSS. Once I got the same visual result as my Wix page, I tried to use the code I previously found by following what people were saying on the internet.",
+            "paragraph5": "From there, I became curious about creating web pages, and little by little I acquired enough knowledge to find <highlight>my first job in my native country, Venezuela.</highlight>"
+        },
+        "learning": {
+            "title": "Learning",
+            "description": "What have I learned in the last few years? ",
+            "paragraph1": "Continuing with the story line, in my first job I had the opportunity to learn <linkAngularJs>AngularJS</linkAngularJs> and <linkAngular2>Angular 2</linkAngular2>, with both technologies I participated in the development of a telecommunications app where I worked with real-time data. Also, I participated in a <highlight>E-learning</highlight> project.",
+            "paragraph2": "After 1 year I had to leave my country to go to Argentina where I had the chance to work with Angular 5 in a <highlight>call center</highlight> project. After two years, I changed the project for another one related to customer service through chat that was developed with <linkReact>React</linkReact> in the Frontend. In that occasion one of the things I learned was the <linkMicroFrontend>micro frontends</linkMicroFrontend> concept, thanks to that architecture we could <highlight>embed the chat inside another monolithic application built in AngularJS.</highlight> We were also able to do this within the mobile applications with native code, this time using <linkWebView>Web Views.</linkWebView>",
+            "paragraph3": "What I liked the most about this was <highlight>how to make several applications live together in a single application</highlight>, regardless of the technologies in which they were made, be in a team completely separated to the monolithic team and achieve independence with the development and deployment of new features.",
+            "paragraph4": "Simultaneously to my work, I am working on my own blog which is built with <linkSvelte>Svelte</linkSvelte> (you probably saw it in my <linkProjects>featured projects</linkProjects>) and although at the time of writing this, the backend is not connected to it, I am using <linkNestJs>NestJS</linkNestJs> to make the sessions so that people can create their own content directly on my blog.",
+            "paragraph5": "I have also been working as a freelancer at <linkWorkana>Workana</linkWorkana> for quite a long time, since I started, I have always been in the mobile area, this time using <linkIonic>Ionic 3</linkIonic> and <linkReactNative>React Native</linkReactNative> to develop the applications.",
+            "paragraph6": "Lastly, nowadays I am working with <linkVueJs>VueJS</linkVueJs> in a e-commerce project."
+        }
+    },
+    "technologies": {
+        "title": "Technologies",
+        "description": "In summary, here are some of the technologies or tools I have worked with.",
+        "frameworks": "Frameworks/libraries",
+        "testing": "Testing",
+        "bundles": "Web Bundlers"
     }
 }
