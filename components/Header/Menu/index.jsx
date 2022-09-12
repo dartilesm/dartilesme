@@ -67,7 +67,7 @@ const Menu = ({ links, items }) => {
               </Navbar.Item>
               <Navbar.Item>
                 <Dropdown>
-                  <Dropdown.Button flat color="primary" css={{ tt: "capitalize" }}>
+                  <Dropdown.Button flat rounded color="primary" css={{ tt: "capitalize" }}>
                     {t(`languages.${locale}`)}
                   </Dropdown.Button>
                   <Dropdown.Menu
