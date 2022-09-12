@@ -5,7 +5,11 @@
         "history": "Historia",
         "technologies": "Tecnologías",
         "buttonText": "Curriculum",
-        "socialText": "Descubre mis redes sociales"
+        "socialText": "Descubre mis redes sociales",
+        "languages": {
+            "es": "Español",
+            "en": "Inglés"
+        }
     },
     "presentation": {
         "greeting": "¡Hola 👋! Soy",

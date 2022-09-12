@@ -5,7 +5,11 @@
         "history": "History",
         "technologies": "Technologies",
         "buttonText": "Resume",
-        "socialText": "Find out my social media"
+        "socialText": "Find out my social media",
+        "languages": {
+            "es": "Spanish",
+            "en": "English"
+        }
     },
     "presentation": {
         "greeting": "Hi 👋! I'm",
@@ -27,7 +31,7 @@
         "ctaText": "Let me a recommendation"
     },
     "projects": {
-        "title": "Featured projecs",
+        "title": "Featured projects",
         "projectDescriptions": {
             "dartilesDev": "A space currently under development, at the beginning it was a personal blog but today it is expected to be used by more people to share knowledge and information from the IT world.",
             "vueStitches": "It is a small package that helps to better use Stitches in Vue projects. Stitches (at the time I'm writing this) only has an adapted version of React, so I'm using the core version to make this package."
