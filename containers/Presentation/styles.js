@@ -42,7 +42,7 @@ export const StyledImageBackground = styled('div', {
 })
 
 export const StyledImage = styled(Image, {
-    clipPath: 'ellipse(44% 49.5% at 50% 50%)',
+    clipPath: 'ellipse(41.7% 49.5% at 50.9% 50.4%)',
     width: '400px',
     height: '400px',
     zIndex: 1,
