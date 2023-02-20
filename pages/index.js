@@ -39,14 +39,14 @@ export default function Home() {
                 <meta property="og:url" content="https://dartiles.me/" />
                 <meta property="og:title" content="Diego Artiles - Frontend Developer" />
                 <meta property="og:description" content="Soy desarrollador frontend con más de 5 años de experiencia. Me considero una persona proactiva y siempre en busca de crear cosas nuevas." />
-                <meta property="og:image" content="https://dartiles.me/me-2.webp" />
+                <meta property="og:image" content="https://dartiles.me/assets/me-2.webp" />
 
 
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content="https://dartiles.me/" />
                 <meta property="twitter:title" content="Diego Artiles - Frontend Developer" />
                 <meta property="twitter:description" content="Soy desarrollador frontend con más de 5 años de experiencia. Me considero una persona proactiva y siempre en busca de crear cosas nuevas." />
-                <meta property="twitter:image" content="https://dartiles.me/me-2.webp" />
+                <meta property="twitter:image" content="https://dartiles.me/assets/me-2.webp" />
                 <meta charset="utf-8" />
                 <link rel="icon" href="/logo.png" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
