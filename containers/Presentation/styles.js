@@ -9,6 +9,7 @@ export const sectionStyles = {
     flexDirection: 'row',
     marginTop: '60px',
     '@smMax': {
+        justifyContent: 'space-around',
         flexDirection: 'column-reverse',
 
     }
@@ -16,9 +17,6 @@ export const sectionStyles = {
 
 export const StyledWelcomePresentation = styled('div', {
     maxWidth: '500px',
-    "@mdMax": {
-        padding: "$xl 0"
-    }
 })
 
 export const StyledImageContainer = styled('div', {
@@ -27,6 +25,7 @@ export const StyledImageContainer = styled('div', {
     position: 'relative',
     display: 'flex',
     justifyContent: 'center'
+
 })
 
 export const StyledImageBackground = styled('div', {
