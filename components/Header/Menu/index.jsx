@@ -61,7 +61,7 @@ const Menu = ({ links, items }) => {
                 links.map((item) => <Navbar.Link key={item.name} hideIn='sm' color='inherit' href={item.href} target="_blank"> {item.icon} </Navbar.Link>)
               }
               <Navbar.Item show='sm' hideIn='xs'>
-                <Button auto rounded as={Link} href='cv.pdf' iconRight={<FiExternalLink color="inherit" />}>
+                <Button auto rounded as={Link} href='https://dartiles.link/cv' target="_blank" iconRight={<FiExternalLink color="inherit" />}>
                   {t('buttonText')}
                 </Button>
               </Navbar.Item>
@@ -121,7 +121,7 @@ const Menu = ({ links, items }) => {
                   ))
                 }
                 <Navbar.CollapseItem as="span">
-                  <Button css={{marginTop: "$xs"}} auto rounded as={Link} href='https://dartiles.link/cv' iconRight={<FiExternalLink color="inherit" />}>
+                  <Button css={{marginTop: "$xs"}} auto rounded as={Link} href='https://dartiles.link/cv' target="_blank" iconRight={<FiExternalLink color="inherit" />}>
                     {t('buttonText')}
                   </Button>
                 </Navbar.CollapseItem>
