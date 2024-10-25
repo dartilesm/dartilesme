@@ -121,7 +121,7 @@ const Menu = ({ links, items }) => {
                   ))
                 }
                 <Navbar.CollapseItem as="span">
-                  <Button css={{marginTop: "$xs"}} auto rounded as={Link} href='cv.pdf' iconRight={<FiExternalLink color="inherit" />}>
+                  <Button css={{marginTop: "$xs"}} auto rounded as={Link} href='https://dartiles.link/cv' iconRight={<FiExternalLink color="inherit" />}>
                     {t('buttonText')}
                   </Button>
                 </Navbar.CollapseItem>
